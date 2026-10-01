@@ -1,0 +1,659 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Disclaimer — Glimmer Home Details</title>
+  <meta name="description" content="Disclaimer for Glimmer Home Details. Important information about the use of our website and content.">
+  <link rel="canonical" href="https://www.glimmerhomedetails.com/disclaimer.html">
+  <meta property="og:title" content="Disclaimer — Glimmer Home Details">
+  <meta property="og:description" content="Important information about the use of Glimmer Home Details content and website.">
+  <meta property="og:type" content="website">
+  <meta property="og:url" content="https://www.glimmerhomedetails.com/disclaimer.html">
+  <style>
+    /* --- RESET & VARIABLES (consistent with original) --- */
+    * {
+      margin: 0;
+      padding: 0;
+      box-sizing: border-box;
+    }
+
+    :root {
+      --ink: #1e1e1e;
+      --paper: #faf9f7;
+      --paper-alt: #f3f1ee;
+      --border: #e2dfda;
+      --accent: #9b6b4b;
+      --accent-light: #c49a7a;
+      --muted: #6e6a64;
+      --white: #ffffff;
+      --font-serif: 'Georgia', 'Times New Roman', serif;
+      --font-sans: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Helvetica, Arial, sans-serif;
+      --max-width: 1280px;
+      --radius-sm: 2px;
+      --radius-md: 4px;
+      --transition: 0.2s ease;
+    }
+
+    html {
+      scroll-behavior: smooth;
+    }
+
+    body {
+      font-family: var(--font-sans);
+      background-color: var(--paper);
+      color: var(--ink);
+      line-height: 1.6;
+      font-size: 16px;
+      -webkit-font-smoothing: antialiased;
+    }
+
+    img {
+      max-width: 100%;
+      height: auto;
+      display: block;
+    }
+
+    a {
+      color: inherit;
+      text-decoration: none;
+    }
+
+    ul, ol {
+      list-style: none;
+    }
+
+    /* --- TYPOGRAPHY --- */
+    h1, h2, h3, h4 {
+      font-family: var(--font-serif);
+      font-weight: 400;
+      line-height: 1.25;
+      letter-spacing: -0.01em;
+    }
+
+    h1 { font-size: 2.6rem; }
+    h2 { font-size: 1.9rem; margin-top: 2.5rem; margin-bottom: 1rem; }
+    h3 { font-size: 1.4rem; margin-top: 2rem; margin-bottom: 0.75rem; }
+    h4 { font-size: 1.15rem; margin-top: 1.5rem; margin-bottom: 0.5rem; }
+
+    p {
+      margin-bottom: 1.25rem;
+      color: #2a2a2a;
+    }
+
+    .meta {
+      font-size: 0.8rem;
+      text-transform: uppercase;
+      letter-spacing: 0.06em;
+      color: var(--muted);
+      font-weight: 500;
+    }
+
+    /* --- LAYOUT --- */
+    .container {
+      max-width: var(--max-width);
+      margin: 0 auto;
+      padding: 0 1.5rem;
+    }
+
+    .layout-grid {
+      display: grid;
+      grid-template-columns: 1fr 320px;
+      gap: 3rem;
+      align-items: start;
+    }
+
+    @media (max-width: 960px) {
+      .layout-grid {
+        grid-template-columns: 1fr;
+        gap: 2rem;
+      }
+    }
+
+    /* --- HEADER (exactly as original) --- */
+    .site-header {
+      background: var(--white);
+      border-bottom: 1px solid var(--border);
+      position: sticky;
+      top: 0;
+      z-index: 100;
+      padding: 1rem 0;
+    }
+
+    .header-inner {
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+    }
+
+    .logo {
+      display: flex;
+      align-items: center;
+      gap: 0.6rem;
+      font-family: var(--font-serif);
+      font-size: 1.6rem;
+      letter-spacing: -0.02em;
+    }
+
+    .logo-mark {
+      width: 36px;
+      height: 36px;
+      background: var(--ink);
+      color: var(--paper);
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      font-size: 1.2rem;
+      border-radius: 2px;
+      font-weight: 400;
+      font-family: var(--font-serif);
+    }
+
+    .logo-text {
+      font-weight: 400;
+      line-height: 1;
+    }
+
+    .logo-text span {
+      display: block;
+      font-size: 0.6rem;
+      font-family: var(--font-sans);
+      text-transform: uppercase;
+      letter-spacing: 0.18em;
+      color: var(--muted);
+      margin-top: 2px;
+    }
+
+    .nav-links {
+      display: flex;
+      gap: 1.8rem;
+      font-size: 0.9rem;
+      font-weight: 500;
+      color: #3a3a3a;
+      align-items: center;
+    }
+
+    .nav-links a {
+      position: relative;
+      padding-bottom: 2px;
+    }
+
+    .nav-links a:hover {
+      color: var(--accent);
+    }
+
+    .nav-links a::after {
+      content: '';
+      position: absolute;
+      bottom: -2px;
+      left: 0;
+      width: 0;
+      height: 1px;
+      background: var(--accent);
+      transition: var(--transition);
+    }
+
+    .nav-links a:hover::after {
+      width: 100%;
+    }
+
+    .mobile-toggle {
+      display: none;
+      background: none;
+      border: 1px solid var(--border);
+      padding: 0.4rem 0.8rem;
+      font-size: 1.2rem;
+      cursor: pointer;
+      border-radius: var(--radius-sm);
+    }
+
+    @media (max-width: 768px) {
+      .nav-links {
+        display: none;
+        flex-direction: column;
+        position: absolute;
+        top: 70px;
+        left: 0;
+        right: 0;
+        background: var(--white);
+        border-bottom: 1px solid var(--border);
+        padding: 1.5rem;
+        gap: 1rem;
+        align-items: flex-start;
+        box-shadow: 0 8px 16px rgba(0,0,0,0.04);
+      }
+      .nav-links.open {
+        display: flex;
+      }
+      .mobile-toggle {
+        display: block;
+      }
+      .header-inner {
+        position: relative;
+      }
+    }
+
+    /* --- DISCLAIMER PAGE SPECIFIC --- */
+    .page-header {
+      padding: 3rem 0 1rem;
+      text-align: center;
+      border-bottom: 1px solid var(--border);
+    }
+
+    .page-header h1 {
+      font-size: 2.8rem;
+      margin-bottom: 0.5rem;
+    }
+
+    .page-header p {
+      color: var(--muted);
+      font-size: 1.1rem;
+      max-width: 600px;
+      margin: 0 auto;
+    }
+
+    .disclaimer-content {
+      padding: 2.5rem 0 3rem;
+    }
+
+    .disclaimer-content .main-article {
+      background: var(--white);
+      border: 1px solid var(--border);
+      border-radius: var(--radius-md);
+      padding: 2.5rem;
+    }
+
+    .disclaimer-content .main-article h2 {
+      margin-top: 1.8rem;
+      font-size: 1.7rem;
+      padding-bottom: 0.4rem;
+      border-bottom: 1px solid var(--border);
+    }
+
+    .disclaimer-content .main-article h2:first-of-type {
+      margin-top: 0;
+    }
+
+    .disclaimer-content .main-article h3 {
+      margin-top: 1.6rem;
+      font-size: 1.25rem;
+      font-family: var(--font-sans);
+      font-weight: 600;
+      letter-spacing: 0;
+    }
+
+    .disclaimer-content .main-article ul,
+    .disclaimer-content .main-article ol {
+      margin: 1rem 0 1.5rem 1.5rem;
+    }
+
+    .disclaimer-content .main-article li {
+      margin-bottom: 0.4rem;
+      color: #2a2a2a;
+    }
+
+    .disclaimer-content .main-article ul li {
+      list-style: disc;
+    }
+
+    .disclaimer-content .main-article ol li {
+      list-style: decimal;
+    }
+
+    .disclaimer-content .main-article .legal-note {
+      background: var(--paper-alt);
+      padding: 1.2rem 1.5rem;
+      border-left: 3px solid var(--accent-light);
+      border-radius: var(--radius-sm);
+      font-size: 0.95rem;
+      margin: 1.8rem 0;
+      color: #3a3a3a;
+    }
+
+    .disclaimer-content .main-article .legal-note strong {
+      color: var(--ink);
+    }
+
+    .disclaimer-content .sidebar {
+      display: flex;
+      flex-direction: column;
+      gap: 1.8rem;
+    }
+
+    .disclaimer-content .sidebar .info-card {
+      background: var(--white);
+      border: 1px solid var(--border);
+      border-radius: var(--radius-md);
+      padding: 1.8rem;
+    }
+
+    .disclaimer-content .sidebar .info-card h3 {
+      margin-top: 0;
+      margin-bottom: 1rem;
+      font-size: 1.2rem;
+      border-bottom: 1px solid var(--border);
+      padding-bottom: 0.7rem;
+    }
+
+    .disclaimer-content .sidebar .info-card p {
+      font-size: 0.95rem;
+      margin-bottom: 0.6rem;
+    }
+
+    .disclaimer-content .sidebar .info-card .label {
+      font-size: 0.75rem;
+      text-transform: uppercase;
+      letter-spacing: 0.07em;
+      color: var(--muted);
+      font-weight: 600;
+      display: block;
+      margin-bottom: 0.15rem;
+    }
+
+    .disclaimer-content .sidebar .info-card .value {
+      font-size: 1rem;
+      margin-bottom: 1rem;
+      display: block;
+    }
+
+    .disclaimer-content .sidebar .info-card .value a {
+      color: var(--accent);
+      border-bottom: 1px solid transparent;
+      transition: border-color var(--transition);
+    }
+
+    .disclaimer-content .sidebar .info-card .value a:hover {
+      border-bottom-color: var(--accent);
+    }
+
+    .disclaimer-content .sidebar .info-card ul {
+      margin: 0.5rem 0 0 1.2rem;
+    }
+
+    .disclaimer-content .sidebar .info-card ul li {
+      font-size: 0.9rem;
+      margin-bottom: 0.3rem;
+      list-style: disc;
+      color: #3a3a3a;
+    }
+
+    .disclaimer-content .sidebar .info-card ul li a {
+      color: var(--accent);
+    }
+
+    .disclaimer-content .sidebar .info-card ul li a:hover {
+      text-decoration: underline;
+    }
+
+    /* --- FOOTER (exactly as original) --- */
+    .site-footer {
+      background: var(--ink);
+      color: #b0aaa4;
+      padding: 3rem 0 1.5rem;
+      font-size: 0.85rem;
+    }
+
+    .footer-grid {
+      display: grid;
+      grid-template-columns: 2fr 1fr 1fr 1fr;
+      gap: 2rem;
+      margin-bottom: 2rem;
+    }
+
+    .footer-brand .logo-text {
+      color: var(--paper);
+    }
+
+    .footer-brand p {
+      color: #8a847e;
+      margin-top: 1rem;
+      max-width: 300px;
+      font-size: 0.85rem;
+    }
+
+    .footer-col h5 {
+      color: var(--paper);
+      font-family: var(--font-sans);
+      font-size: 0.8rem;
+      text-transform: uppercase;
+      letter-spacing: 0.08em;
+      margin-bottom: 1rem;
+      font-weight: 600;
+    }
+
+    .footer-col a {
+      display: block;
+      margin-bottom: 0.5rem;
+      color: #8a847e;
+      transition: color var(--transition);
+    }
+
+    .footer-col a:hover {
+      color: var(--paper);
+    }
+
+    .footer-bottom {
+      border-top: 1px solid #333;
+      padding-top: 1.5rem;
+      display: flex;
+      justify-content: space-between;
+      flex-wrap: wrap;
+      gap: 1rem;
+      color: #6a645e;
+      font-size: 0.8rem;
+    }
+
+    @media (max-width: 768px) {
+      .footer-grid {
+        grid-template-columns: 1fr 1fr;
+      }
+    }
+
+    @media (max-width: 480px) {
+      .footer-grid {
+        grid-template-columns: 1fr;
+      }
+    }
+
+    /* utility */
+    .hidden { display: none !important; }
+    .text-center { text-align: center; }
+
+    @media (max-width: 640px) {
+      .disclaimer-content .main-article {
+        padding: 1.5rem;
+      }
+      .page-header h1 {
+        font-size: 2.2rem;
+      }
+    }
+  </style>
+</head>
+<body>
+
+<!-- ================= HEADER ================= -->
+<header class="site-header">
+  <div class="container header-inner">
+    <div class="logo">
+      <div class="logo-mark">G</div>
+      <div class="logo-text">
+        Glimmer Home
+        <span>Details</span>
+      </div>
+    </div>
+    <button class="mobile-toggle" id="mobileToggle" aria-label="Menu">☰</button>
+    <nav class="nav-links" id="navLinks">
+      <li><a href="index.html">Home</a></li>
+      <li><a href="about.html">About</a></li>
+      <li><a href="contact.html">Contact</a></li>
+      <li><a href="terms.html">Terms Of Privacy</a></li>
+      <li><a href="privacy.html">Privacy Policy</a></li>
+      <li><a href="cookies.html">Cookies Policy</a></li>
+      <li><a href="disclaimer.html">Disclaimer</a></li>
+      <li><a href="categories.html">Categories</a></li>
+    </nav>
+  </div>
+</header>
+
+<!-- ================= PAGE HEADER ================= -->
+<section class="page-header">
+  <div class="container">
+    <h1>Disclaimer</h1>
+    <p>Last updated: 1 March 2025. Please read this disclaimer carefully before using our website.</p>
+  </div>
+</section>
+
+<!-- ================= MAIN DISCLAIMER CONTENT ================= -->
+<div class="container disclaimer-content">
+  <div class="layout-grid">
+
+    <!-- ===== MAIN ARTICLE ===== -->
+    <article class="main-article">
+      <p><strong>Glimmer Home Details</strong> ("we", "us", or "our") operates the website <a href="https://www.glimmerhomedetails.com" style="color:var(--accent);">www.glimmerhomedetails.com</a> (the "Site"). This disclaimer governs your use of our Site. By accessing or using the Site, you agree to the terms outlined below. If you do not agree, please do not use the Site.</p>
+
+      <div class="legal-note">
+        <strong>In short:</strong> The content on Glimmer Home Details is for general informational and inspirational purposes only. We are not liable for any decisions or actions taken based on the information provided.
+      </div>
+
+      <h2>1. General Information Only</h2>
+      <p>The content on this Site — including articles, images, graphics, and other materials — is provided for general informational and inspirational purposes only. While we strive to keep information accurate and up to date, we make no representations or warranties of any kind, express or implied, about the completeness, accuracy, reliability, suitability, or availability of the information, products, services, or related graphics contained on the Site.</p>
+      <p>Any reliance you place on such information is therefore strictly at your own risk. You should consult a qualified professional (such as an architect, interior designer, contractor, or legal advisor) before making any decisions based on the content of this Site.</p>
+
+      <h2>2. No Professional Advice</h2>
+      <p>The content on Glimmer Home Details does not constitute professional advice of any kind, including but not limited to:</p>
+      <ul>
+        <li>Architectural, engineering, or construction advice</li>
+        <li>Interior design or decoration advice</li>
+        <li>Real estate, financial, or legal advice</li>
+        <li>Safety or building code guidance</li>
+      </ul>
+      <p>Always seek the advice of qualified professionals with any questions you may have regarding a specific project or situation.</p>
+
+      <h2>3. External Links Disclaimer</h2>
+      <p>This Site may contain links to other websites or content belonging to or originating from third parties. Such external links are not investigated, monitored, or checked for accuracy, adequacy, validity, reliability, availability, or completeness by us.</p>
+      <p>We do not warrant, endorse, guarantee, or assume responsibility for the accuracy or reliability of any information offered by third-party websites linked through the Site. We will not be a party to or in any way be responsible for monitoring any transaction between you and third-party providers of products or services.</p>
+
+      <h2>4. Affiliates & Sponsored Content</h2>
+      <p>Glimmer Home Details may participate in affiliate marketing programs. This means we may earn a small commission if you click on certain links and make a purchase — at no additional cost to you. We only recommend products or services we genuinely believe may be of interest to our readers.</p>
+      <p>Any sponsored content or paid partnerships will be clearly disclosed in accordance with applicable advertising regulations.</p>
+
+      <h2>5. Errors and Omissions</h2>
+      <p>While we have made every attempt to ensure that the information contained in this Site is correct, Glimmer Home Details is not responsible for any errors or omissions, or for the results obtained from the use of this information. All information in this Site is provided "as is", with no guarantee of completeness, accuracy, timeliness, or of the results obtained from the use of this information.</p>
+
+      <h2>6. Limitation of Liability</h2>
+      <p>In no event shall Glimmer Home Details, its owners, authors, contributors, or affiliates be liable for any direct, indirect, incidental, consequential, or special damages arising out of or in connection with your use of the Site or reliance on any information provided. This includes, without limitation, loss of profits, loss of data, or business interruption.</p>
+
+      <h2>7. User Responsibility</h2>
+      <p>You are solely responsible for your own actions and decisions when using the information on this Site. You agree to use the Site in a manner consistent with all applicable laws and regulations. You also agree not to:</p>
+      <ul>
+        <li>Reproduce, duplicate, or copy material from the Site without permission</li>
+        <li>Use the Site for any unlawful purpose</li>
+        <li>Attempt to gain unauthorized access to any part of the Site</li>
+      </ul>
+
+      <h2>8. Changes to This Disclaimer</h2>
+      <p>We may update this Disclaimer from time to time. When we do, we will revise the "Last updated" date at the top of this page. We encourage you to review this page periodically to stay informed. Your continued use of the Site after any changes constitutes acceptance of those changes.</p>
+
+      <h2>9. Contact Us</h2>
+      <p>If you have any questions about this Disclaimer, please contact us:</p>
+      <ul>
+        <li><strong>Email:</strong> <a href="mailto:legal@glimmerhomedetails.com" style="color:var(--accent);">legal@glimmerhomedetails.com</a></li>
+        <li><strong>General Inquiries:</strong> <a href="mailto:hello@glimmerhomedetails.com" style="color:var(--accent);">hello@glimmerhomedetails.com</a></li>
+        <li><strong>Location:</strong> Milan, Italy</li>
+      </ul>
+      <p style="margin-top:1.5rem; font-size:0.9rem; color:var(--muted);">This disclaimer is effective as of 1 March 2025.</p>
+    </article>
+
+    <!-- ===== SIDEBAR ===== -->
+    <aside class="sidebar">
+      <div class="info-card">
+        <h3>Quick Links</h3>
+        <ul>
+          <li><a href="#general-info">General Information</a></li>
+          <li><a href="#no-advice">No Professional Advice</a></li>
+          <li><a href="#external-links">External Links</a></li>
+          <li><a href="#affiliates">Affiliates</a></li>
+          <li><a href="#liability">Limitation of Liability</a></li>
+        </ul>
+      </div>
+
+      <div class="info-card">
+        <h3>Legal Contact</h3>
+        <span class="label">Legal Inquiries</span>
+        <span class="value"><a href="mailto:legal@glimmerhomedetails.com">legal@glimmerhomedetails.com</a></span>
+        <span class="label">General Inquiries</span>
+        <span class="value"><a href="mailto:hello@glimmerhomedetails.com">hello@glimmerhomedetails.com</a></span>
+        <span class="label">Response Time</span>
+        <span class="value">Within 30 days</span>
+      </div>
+
+      <div class="info-card">
+        <h3>Related Policies</h3>
+        <ul>
+          <li><a href="privacy.html">Privacy Policy</a></li>
+          <li><a href="terms.html">Terms of Use</a></li>
+          <li><a href="cookies.html">Cookies Policy</a></li>
+        </ul>
+      </div>
+    </aside>
+
+  </div>
+</div>
+
+<!-- ================= FOOTER ================= -->
+<footer class="site-footer">
+  <div class="container">
+    <div class="footer-grid">
+      <div class="footer-brand">
+        <div class="logo-text" style="font-family:var(--font-serif); font-size:1.4rem;">Glimmer Home Details</div>
+        <p>An independent publication exploring residential architecture, interior design, and the art of living well. Founded 2021.</p>
+      </div>
+      <div class="footer-col">
+        <h5>About</h5>
+        <a href="#">Our Mission</a>
+        <a href="#">Editorial Team</a>
+        <a href="#">Contact</a>
+        <a href="#">Privacy Policy</a>
+      </div>
+      <div class="footer-col">
+        <h5>Topics</h5>
+        <a href="#">Interior Design</a>
+        <a href="#">Architecture</a>
+        <a href="#">Materials</a>
+        <a href="#">Lighting</a>
+      </div>
+      <div class="footer-col">
+        <h5>Legal</h5>
+        <a href="#">Terms of Use</a>
+        <a href="#">Cookie Policy</a>
+        <a href="#">Disclaimer</a>
+        <a href="#">Sitemap</a>
+      </div>
+    </div>
+    <div class="footer-bottom">
+      <span>© 2025 Glimmer Home Details. All rights reserved.</span>
+      <span>Made with care for thoughtful homes.</span>
+    </div>
+  </div>
+</footer>
+
+<!-- ================= JAVASCRIPT ================= -->
+<script>
+  (function() {
+    // ----- MOBILE MENU TOGGLE (same as original) -----
+    const mobileToggle = document.getElementById('mobileToggle');
+    const navLinks = document.getElementById('navLinks');
+    mobileToggle.addEventListener('click', () => {
+      navLinks.classList.toggle('open');
+    });
+
+    // Close mobile menu when clicking a link
+    navLinks.querySelectorAll('a').forEach(link => {
+      link.addEventListener('click', () => {
+        navLinks.classList.remove('open');
+      });
+    });
+  })();
+</script>
+</body>
+</html>

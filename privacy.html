@@ -1,0 +1,727 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Privacy Policy — Glimmer Home Details</title>
+  <meta name="description" content="Privacy Policy for Glimmer Home Details. Learn how we collect, use, and protect your personal information.">
+  <link rel="canonical" href="https://www.glimmerhomedetails.com/privacy.html">
+  <meta property="og:title" content="Privacy Policy — Glimmer Home Details">
+  <meta property="og:description" content="How Glimmer Home Details collects, uses, and safeguards your data.">
+  <meta property="og:type" content="website">
+  <meta property="og:url" content="https://www.glimmerhomedetails.com/privacy.html">
+  <style>
+    /* --- RESET & VARIABLES (consistent with original) --- */
+    * {
+      margin: 0;
+      padding: 0;
+      box-sizing: border-box;
+    }
+
+    :root {
+      --ink: #1e1e1e;
+      --paper: #faf9f7;
+      --paper-alt: #f3f1ee;
+      --border: #e2dfda;
+      --accent: #9b6b4b;
+      --accent-light: #c49a7a;
+      --muted: #6e6a64;
+      --white: #ffffff;
+      --font-serif: 'Georgia', 'Times New Roman', serif;
+      --font-sans: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Helvetica, Arial, sans-serif;
+      --max-width: 1280px;
+      --radius-sm: 2px;
+      --radius-md: 4px;
+      --transition: 0.2s ease;
+    }
+
+    html {
+      scroll-behavior: smooth;
+    }
+
+    body {
+      font-family: var(--font-sans);
+      background-color: var(--paper);
+      color: var(--ink);
+      line-height: 1.6;
+      font-size: 16px;
+      -webkit-font-smoothing: antialiased;
+    }
+
+    img {
+      max-width: 100%;
+      height: auto;
+      display: block;
+    }
+
+    a {
+      color: inherit;
+      text-decoration: none;
+    }
+
+    ul, ol {
+      list-style: none;
+    }
+
+    /* --- TYPOGRAPHY --- */
+    h1, h2, h3, h4 {
+      font-family: var(--font-serif);
+      font-weight: 400;
+      line-height: 1.25;
+      letter-spacing: -0.01em;
+    }
+
+    h1 { font-size: 2.6rem; }
+    h2 { font-size: 1.9rem; margin-top: 2.5rem; margin-bottom: 1rem; }
+    h3 { font-size: 1.4rem; margin-top: 2rem; margin-bottom: 0.75rem; }
+    h4 { font-size: 1.15rem; margin-top: 1.5rem; margin-bottom: 0.5rem; }
+
+    p {
+      margin-bottom: 1.25rem;
+      color: #2a2a2a;
+    }
+
+    .meta {
+      font-size: 0.8rem;
+      text-transform: uppercase;
+      letter-spacing: 0.06em;
+      color: var(--muted);
+      font-weight: 500;
+    }
+
+    /* --- LAYOUT --- */
+    .container {
+      max-width: var(--max-width);
+      margin: 0 auto;
+      padding: 0 1.5rem;
+    }
+
+    .layout-grid {
+      display: grid;
+      grid-template-columns: 1fr 320px;
+      gap: 3rem;
+      align-items: start;
+    }
+
+    @media (max-width: 960px) {
+      .layout-grid {
+        grid-template-columns: 1fr;
+        gap: 2rem;
+      }
+    }
+
+    /* --- HEADER (exactly as original) --- */
+    .site-header {
+      background: var(--white);
+      border-bottom: 1px solid var(--border);
+      position: sticky;
+      top: 0;
+      z-index: 100;
+      padding: 1rem 0;
+    }
+
+    .header-inner {
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+    }
+
+    .logo {
+      display: flex;
+      align-items: center;
+      gap: 0.6rem;
+      font-family: var(--font-serif);
+      font-size: 1.6rem;
+      letter-spacing: -0.02em;
+    }
+
+    .logo-mark {
+      width: 36px;
+      height: 36px;
+      background: var(--ink);
+      color: var(--paper);
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      font-size: 1.2rem;
+      border-radius: 2px;
+      font-weight: 400;
+      font-family: var(--font-serif);
+    }
+
+    .logo-text {
+      font-weight: 400;
+      line-height: 1;
+    }
+
+    .logo-text span {
+      display: block;
+      font-size: 0.6rem;
+      font-family: var(--font-sans);
+      text-transform: uppercase;
+      letter-spacing: 0.18em;
+      color: var(--muted);
+      margin-top: 2px;
+    }
+
+    .nav-links {
+      display: flex;
+      gap: 1.8rem;
+      font-size: 0.9rem;
+      font-weight: 500;
+      color: #3a3a3a;
+      align-items: center;
+    }
+
+    .nav-links a {
+      position: relative;
+      padding-bottom: 2px;
+    }
+
+    .nav-links a:hover {
+      color: var(--accent);
+    }
+
+    .nav-links a::after {
+      content: '';
+      position: absolute;
+      bottom: -2px;
+      left: 0;
+      width: 0;
+      height: 1px;
+      background: var(--accent);
+      transition: var(--transition);
+    }
+
+    .nav-links a:hover::after {
+      width: 100%;
+    }
+
+    .mobile-toggle {
+      display: none;
+      background: none;
+      border: 1px solid var(--border);
+      padding: 0.4rem 0.8rem;
+      font-size: 1.2rem;
+      cursor: pointer;
+      border-radius: var(--radius-sm);
+    }
+
+    @media (max-width: 768px) {
+      .nav-links {
+        display: none;
+        flex-direction: column;
+        position: absolute;
+        top: 70px;
+        left: 0;
+        right: 0;
+        background: var(--white);
+        border-bottom: 1px solid var(--border);
+        padding: 1.5rem;
+        gap: 1rem;
+        align-items: flex-start;
+        box-shadow: 0 8px 16px rgba(0,0,0,0.04);
+      }
+      .nav-links.open {
+        display: flex;
+      }
+      .mobile-toggle {
+        display: block;
+      }
+      .header-inner {
+        position: relative;
+      }
+    }
+
+    /* --- PRIVACY PAGE SPECIFIC --- */
+    .page-header {
+      padding: 3rem 0 1rem;
+      text-align: center;
+      border-bottom: 1px solid var(--border);
+    }
+
+    .page-header h1 {
+      font-size: 2.8rem;
+      margin-bottom: 0.5rem;
+    }
+
+    .page-header p {
+      color: var(--muted);
+      font-size: 1.1rem;
+      max-width: 600px;
+      margin: 0 auto;
+    }
+
+    .privacy-content {
+      padding: 2.5rem 0 3rem;
+    }
+
+    .privacy-content .main-article {
+      background: var(--white);
+      border: 1px solid var(--border);
+      border-radius: var(--radius-md);
+      padding: 2.5rem;
+    }
+
+    .privacy-content .main-article h2 {
+      margin-top: 1.8rem;
+      font-size: 1.7rem;
+      padding-bottom: 0.4rem;
+      border-bottom: 1px solid var(--border);
+    }
+
+    .privacy-content .main-article h2:first-of-type {
+      margin-top: 0;
+    }
+
+    .privacy-content .main-article h3 {
+      margin-top: 1.6rem;
+      font-size: 1.25rem;
+      font-family: var(--font-sans);
+      font-weight: 600;
+      letter-spacing: 0;
+    }
+
+    .privacy-content .main-article ul,
+    .privacy-content .main-article ol {
+      margin: 1rem 0 1.5rem 1.5rem;
+    }
+
+    .privacy-content .main-article li {
+      margin-bottom: 0.4rem;
+      color: #2a2a2a;
+    }
+
+    .privacy-content .main-article ul li {
+      list-style: disc;
+    }
+
+    .privacy-content .main-article ol li {
+      list-style: decimal;
+    }
+
+    .privacy-content .main-article .legal-note {
+      background: var(--paper-alt);
+      padding: 1.2rem 1.5rem;
+      border-left: 3px solid var(--accent-light);
+      border-radius: var(--radius-sm);
+      font-size: 0.95rem;
+      margin: 1.8rem 0;
+      color: #3a3a3a;
+    }
+
+    .privacy-content .main-article .legal-note strong {
+      color: var(--ink);
+    }
+
+    .privacy-content .main-article table {
+      width: 100%;
+      border-collapse: collapse;
+      margin: 1.5rem 0;
+      font-size: 0.9rem;
+    }
+
+    .privacy-content .main-article th {
+      background: var(--paper-alt);
+      text-align: left;
+      padding: 0.7rem 1rem;
+      border: 1px solid var(--border);
+      font-weight: 600;
+      color: var(--ink);
+    }
+
+    .privacy-content .main-article td {
+      padding: 0.7rem 1rem;
+      border: 1px solid var(--border);
+      color: #2a2a2a;
+    }
+
+    .privacy-content .sidebar {
+      display: flex;
+      flex-direction: column;
+      gap: 1.8rem;
+    }
+
+    .privacy-content .sidebar .info-card {
+      background: var(--white);
+      border: 1px solid var(--border);
+      border-radius: var(--radius-md);
+      padding: 1.8rem;
+    }
+
+    .privacy-content .sidebar .info-card h3 {
+      margin-top: 0;
+      margin-bottom: 1rem;
+      font-size: 1.2rem;
+      border-bottom: 1px solid var(--border);
+      padding-bottom: 0.7rem;
+    }
+
+    .privacy-content .sidebar .info-card p {
+      font-size: 0.95rem;
+      margin-bottom: 0.6rem;
+    }
+
+    .privacy-content .sidebar .info-card .label {
+      font-size: 0.75rem;
+      text-transform: uppercase;
+      letter-spacing: 0.07em;
+      color: var(--muted);
+      font-weight: 600;
+      display: block;
+      margin-bottom: 0.15rem;
+    }
+
+    .privacy-content .sidebar .info-card .value {
+      font-size: 1rem;
+      margin-bottom: 1rem;
+      display: block;
+    }
+
+    .privacy-content .sidebar .info-card .value a {
+      color: var(--accent);
+      border-bottom: 1px solid transparent;
+      transition: border-color var(--transition);
+    }
+
+    .privacy-content .sidebar .info-card .value a:hover {
+      border-bottom-color: var(--accent);
+    }
+
+    .privacy-content .sidebar .info-card ul {
+      margin: 0.5rem 0 0 1.2rem;
+    }
+
+    .privacy-content .sidebar .info-card ul li {
+      font-size: 0.9rem;
+      margin-bottom: 0.3rem;
+      list-style: disc;
+      color: #3a3a3a;
+    }
+
+    .privacy-content .sidebar .info-card ul li a {
+      color: var(--accent);
+    }
+
+    .privacy-content .sidebar .info-card ul li a:hover {
+      text-decoration: underline;
+    }
+
+    /* --- FOOTER (exactly as original) --- */
+    .site-footer {
+      background: var(--ink);
+      color: #b0aaa4;
+      padding: 3rem 0 1.5rem;
+      font-size: 0.85rem;
+    }
+
+    .footer-grid {
+      display: grid;
+      grid-template-columns: 2fr 1fr 1fr 1fr;
+      gap: 2rem;
+      margin-bottom: 2rem;
+    }
+
+    .footer-brand .logo-text {
+      color: var(--paper);
+    }
+
+    .footer-brand p {
+      color: #8a847e;
+      margin-top: 1rem;
+      max-width: 300px;
+      font-size: 0.85rem;
+    }
+
+    .footer-col h5 {
+      color: var(--paper);
+      font-family: var(--font-sans);
+      font-size: 0.8rem;
+      text-transform: uppercase;
+      letter-spacing: 0.08em;
+      margin-bottom: 1rem;
+      font-weight: 600;
+    }
+
+    .footer-col a {
+      display: block;
+      margin-bottom: 0.5rem;
+      color: #8a847e;
+      transition: color var(--transition);
+    }
+
+    .footer-col a:hover {
+      color: var(--paper);
+    }
+
+    .footer-bottom {
+      border-top: 1px solid #333;
+      padding-top: 1.5rem;
+      display: flex;
+      justify-content: space-between;
+      flex-wrap: wrap;
+      gap: 1rem;
+      color: #6a645e;
+      font-size: 0.8rem;
+    }
+
+    @media (max-width: 768px) {
+      .footer-grid {
+        grid-template-columns: 1fr 1fr;
+      }
+    }
+
+    @media (max-width: 480px) {
+      .footer-grid {
+        grid-template-columns: 1fr;
+      }
+    }
+
+    /* utility */
+    .hidden { display: none !important; }
+    .text-center { text-align: center; }
+
+    @media (max-width: 640px) {
+      .privacy-content .main-article {
+        padding: 1.5rem;
+      }
+      .page-header h1 {
+        font-size: 2.2rem;
+      }
+    }
+  </style>
+</head>
+<body>
+
+<!-- ================= HEADER ================= -->
+<header class="site-header">
+  <div class="container header-inner">
+    <div class="logo">
+      <div class="logo-mark">G</div>
+      <div class="logo-text">
+        Glimmer Home
+        <span>Details</span>
+      </div>
+    </div>
+    <button class="mobile-toggle" id="mobileToggle" aria-label="Menu">☰</button>
+    <nav class="nav-links" id="navLinks">
+      <li><a href="index.html">Home</a></li>
+      <li><a href="about.html">About</a></li>
+      <li><a href="contact.html">Contact</a></li>
+      <li><a href="terms.html">Terms Of Privacy</a></li>
+      <li><a href="privacy.html">Privacy Policy</a></li>
+      <li><a href="cookies.html">Cookies Policy</a></li>
+      <li><a href="disclaimer.html">Disclaimer</a></li>
+      <li><a href="categories.html">Categories</a></li>
+    </nav>
+  </div>
+</header>
+
+<!-- ================= PAGE HEADER ================= -->
+<section class="page-header">
+  <div class="container">
+    <h1>Privacy Policy</h1>
+    <p>Last updated: 1 March 2025. Your privacy matters — here’s exactly how we handle your information.</p>
+  </div>
+</section>
+
+<!-- ================= MAIN PRIVACY CONTENT ================= -->
+<div class="container privacy-content">
+  <div class="layout-grid">
+
+    <!-- ===== MAIN ARTICLE ===== -->
+    <article class="main-article">
+      <p><strong>Glimmer Home Details</strong> ("we", "us", or "our") operates the website <a href="https://www.glimmerhomedetails.com" style="color:var(--accent);">www.glimmerhomedetails.com</a>. This Privacy Policy explains how we collect, use, disclose, and safeguard your information when you visit our site or interact with our content. Please read it carefully.</p>
+
+      <div class="legal-note">
+        <strong>In short:</strong> We collect minimal data, we never sell your personal information, and we use standard security measures to protect what you share with us.
+      </div>
+
+      <h2>1. Information We Collect</h2>
+
+      <h3>1.1 Information you provide voluntarily</h3>
+      <p>We may collect personal information that you voluntarily provide when you:</p>
+      <ul>
+        <li>Fill out our <a href="contact.html" style="color:var(--accent);">contact form</a> (name, email address, subject, and message).</li>
+        <li>Subscribe to our newsletter (email address).</li>
+        <li>Submit a pitch or editorial inquiry (name, email, and any attachments or content you send).</li>
+        <li>Comment on articles or interact with our social media channels.</li>
+      </ul>
+
+      <h3>1.2 Information collected automatically</h3>
+      <p>Like most websites, we use cookies and similar technologies to automatically collect certain technical information when you visit:</p>
+      <ul>
+        <li>IP address (anonymised where possible)</li>
+        <li>Browser type and version</li>
+        <li>Operating system</li>
+        <li>Pages you visit and time spent</li>
+        <li>Referring website or source</li>
+        <li>Device type (desktop, mobile, tablet)</li>
+      </ul>
+      <p>This data is aggregated and used for analytics to improve our content and user experience. For more details, see our <a href="cookies.html" style="color:var(--accent);">Cookies Policy</a>.</p>
+
+      <h2>2. How We Use Your Information</h2>
+      <p>We use the information we collect for the following purposes:</p>
+      <ul>
+        <li><strong>To respond to your inquiries:</strong> When you contact us, we use your name and email to reply.</li>
+        <li><strong>To send newsletters:</strong> If you opt in, we use your email to send occasional updates. You can unsubscribe at any time.</li>
+        <li><strong>To improve our website:</strong> Analytics help us understand which articles resonate and how visitors navigate the site.</li>
+        <li><strong>To maintain security:</strong> We monitor for fraudulent or malicious activity.</li>
+        <li><strong>To comply with legal obligations:</strong> If required by law, we may retain or disclose certain information.</li>
+      </ul>
+
+      <h2>3. Legal Basis for Processing (GDPR)</h2>
+      <p>If you are located in the European Economic Area (EEA), our legal basis for collecting and using your personal information depends on the data and the context:</p>
+      <ul>
+        <li><strong>Consent:</strong> You have given us permission via a clear affirmative action (e.g., subscribing to our newsletter).</li>
+        <li><strong>Legitimate interests:</strong> Processing is necessary for our legitimate interests, such as improving our website, provided it doesn't override your rights.</li>
+        <li><strong>Contractual necessity:</strong> Processing is necessary to fulfill a request you made (e.g., responding to a contact form).</li>
+        <li><strong>Legal obligation:</strong> We may process data to comply with applicable laws.</li>
+      </ul>
+
+      <h2>4. Cookies and Tracking Technologies</h2>
+      <p>We use cookies (small text files placed on your device) to enhance your browsing experience, analyse site traffic, and remember your preferences. You can control cookies through your browser settings. Disabling cookies may affect certain features of the site.</p>
+      <p>For a full breakdown of the cookies we use, please see our <a href="cookies.html" style="color:var(--accent);">Cookies Policy</a>.</p>
+
+      <h2>5. How We Share Your Information</h2>
+      <p>We do <strong>not</strong> sell, rent, or trade your personal information. We may share your data only in the following limited circumstances:</p>
+      <ul>
+        <li><strong>Service providers:</strong> Trusted third-party companies that help us operate the website (e.g., email delivery services, analytics providers). They are contractually bound to protect your data.</li>
+        <li><strong>Legal requirements:</strong> If required by law, court order, or governmental authority.</li>
+        <li><strong>Business transfers:</strong> In the unlikely event of a merger or acquisition, your data may be transferred as part of the business assets.</li>
+      </ul>
+
+      <h2>6. Data Retention</h2>
+      <p>We retain your personal information only for as long as necessary to fulfill the purposes outlined in this policy, unless a longer retention period is required by law. Contact form submissions are typically kept for 12 months. Newsletter subscriptions are retained until you unsubscribe.</p>
+
+      <h2>7. Your Rights</h2>
+      <p>Depending on your location, you may have the following rights regarding your personal data:</p>
+      <ul>
+        <li><strong>Access:</strong> Request a copy of the personal data we hold about you.</li>
+        <li><strong>Correction:</strong> Request that we correct inaccurate or incomplete information.</li>
+        <li><strong>Deletion:</strong> Request that we delete your personal data (the "right to be forgotten").</li>
+        <li><strong>Restriction:</strong> Request that we limit how we process your data.</li>
+        <li><strong>Portability:</strong> Request a machine-readable copy of your data.</li>
+        <li><strong>Objection:</strong> Object to our processing based on legitimate interests.</li>
+        <li><strong>Withdraw consent:</strong> If processing is based on consent, you can withdraw it at any time.</li>
+      </ul>
+      <p>To exercise any of these rights, please contact us at <a href="mailto:privacy@glimmerhomedetails.com" style="color:var(--accent);">privacy@glimmerhomedetails.com</a>. We will respond within 30 days.</p>
+
+      <h2>8. Data Security</h2>
+      <p>We implement appropriate technical and organisational measures to protect your personal information from unauthorised access, alteration, disclosure, or destruction. These include encryption (SSL/TLS), access controls, and regular security reviews. However, no method of transmission over the internet is 100% secure, and we cannot guarantee absolute security.</p>
+
+      <h2>9. Third-Party Links</h2>
+      <p>Our website may contain links to external sites (e.g., Instagram, Pinterest, or referenced articles). We are not responsible for the privacy practices or content of those third-party sites. We encourage you to read their privacy policies.</p>
+
+      <h2>10. Children's Privacy</h2>
+      <p>Glimmer Home Details is not directed at children under 16. We do not knowingly collect personal information from children. If you believe we have inadvertently collected such data, please contact us and we will delete it promptly.</p>
+
+      <h2>11. International Data Transfers</h2>
+      <p>Our servers are located in the European Union. If you are accessing our site from outside the EU, please be aware that your information may be transferred to, stored, and processed in the EU. We take steps to ensure that your data receives an adequate level of protection.</p>
+
+      <h2>12. Changes to This Privacy Policy</h2>
+      <p>We may update this Privacy Policy from time to time. When we do, we will revise the "Last updated" date at the top of this page. We encourage you to review this policy periodically. Your continued use of the site after changes constitutes acceptance of the updated policy.</p>
+
+      <h2>13. Contact Us</h2>
+      <p>If you have any questions, concerns, or requests regarding this Privacy Policy or your personal data, please contact us:</p>
+      <ul>
+        <li><strong>Email:</strong> <a href="mailto:privacy@glimmerhomedetails.com" style="color:var(--accent);">privacy@glimmerhomedetails.com</a></li>
+        <li><strong>Editorial office:</strong> <a href="mailto:hello@glimmerhomedetails.com" style="color:var(--accent);">hello@glimmerhomedetails.com</a></li>
+        <li><strong>Location:</strong> Milan, Italy</li>
+      </ul>
+      <p style="margin-top:1.5rem; font-size:0.9rem; color:var(--muted);">This policy is effective as of 1 March 2025.</p>
+    </article>
+
+    <!-- ===== SIDEBAR ===== -->
+    <aside class="sidebar">
+      <div class="info-card">
+        <h3>Quick Links</h3>
+        <ul>
+          <li><a href="#information-we-collect">Information We Collect</a></li>
+          <li><a href="#how-we-use">How We Use Your Information</a></li>
+          <li><a href="#cookies">Cookies &amp; Tracking</a></li>
+          <li><a href="#your-rights">Your Rights</a></li>
+          <li><a href="#contact">Contact Us</a></li>
+        </ul>
+      </div>
+
+      <div class="info-card">
+        <h3>Privacy Contact</h3>
+        <span class="label">Data Protection</span>
+        <span class="value"><a href="mailto:privacy@glimmerhomedetails.com">privacy@glimmerhomedetails.com</a></span>
+        <span class="label">General Inquiries</span>
+        <span class="value"><a href="mailto:hello@glimmerhomedetails.com">hello@glimmerhomedetails.com</a></span>
+        <span class="label">Response Time</span>
+        <span class="value">Within 30 days</span>
+      </div>
+
+      <div class="info-card">
+        <h3>Related Policies</h3>
+        <ul>
+          <li><a href="terms.html">Terms of Use</a></li>
+          <li><a href="cookies.html">Cookies Policy</a></li>
+          <li><a href="disclaimer.html">Disclaimer</a></li>
+        </ul>
+      </div>
+    </aside>
+
+  </div>
+</div>
+
+<!-- ================= FOOTER ================= -->
+<footer class="site-footer">
+  <div class="container">
+    <div class="footer-grid">
+      <div class="footer-brand">
+        <div class="logo-text" style="font-family:var(--font-serif); font-size:1.4rem;">Glimmer Home Details</div>
+        <p>An independent publication exploring residential architecture, interior design, and the art of living well. Founded 2021.</p>
+      </div>
+      <div class="footer-col">
+        <h5>About</h5>
+        <a href="#">Our Mission</a>
+        <a href="#">Editorial Team</a>
+        <a href="#">Contact</a>
+        <a href="#">Privacy Policy</a>
+      </div>
+      <div class="footer-col">
+        <h5>Topics</h5>
+        <a href="#">Interior Design</a>
+        <a href="#">Architecture</a>
+        <a href="#">Materials</a>
+        <a href="#">Lighting</a>
+      </div>
+      <div class="footer-col">
+        <h5>Legal</h5>
+        <a href="#">Terms of Use</a>
+        <a href="#">Cookie Policy</a>
+        <a href="#">Disclaimer</a>
+        <a href="#">Sitemap</a>
+      </div>
+    </div>
+    <div class="footer-bottom">
+      <span>© 2025 Glimmer Home Details. All rights reserved.</span>
+      <span>Made with care for thoughtful homes.</span>
+    </div>
+  </div>
+</footer>
+
+<!-- ================= JAVASCRIPT ================= -->
+<script>
+  (function() {
+    // ----- MOBILE MENU TOGGLE (same as original) -----
+    const mobileToggle = document.getElementById('mobileToggle');
+    const navLinks = document.getElementById('navLinks');
+    mobileToggle.addEventListener('click', () => {
+      navLinks.classList.toggle('open');
+    });
+
+    // Close mobile menu when clicking a link
+    navLinks.querySelectorAll('a').forEach(link => {
+      link.addEventListener('click', () => {
+        navLinks.classList.remove('open');
+      });
+    });
+  })();
+</script>
+</body>
+</html>

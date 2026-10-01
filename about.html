@@ -1,0 +1,960 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>About — Glimmer Home Details</title>
+  <meta name="description" content="Learn about Glimmer Home Details: an independent publication exploring residential architecture, interior design, materials, lighting, and practical design knowledge.">
+  <link rel="canonical" href="https://www.glimmerhomedetails.com/about.html">
+  <!-- Open Graph -->
+  <meta property="og:title" content="About — Glimmer Home Details">
+  <meta property="og:description" content="Independent publication exploring residential architecture, interior design, and the art of living well.">
+  <meta property="og:type" content="website">
+  <meta property="og:url" content="https://www.glimmerhomedetails.com/about.html">
+  <meta property="og:image" content="https://images.unsplash.com/photo-1616486338812-3dadae4b4ace?w=1200&h=630&fit=crop">
+  <!-- Schema.org -->
+  <script type="application/ld+json">
+  {
+    "@context": "https://schema.org",
+    "@type": "AboutPage",
+    "name": "About Glimmer Home Details",
+    "description": "Independent publication exploring residential architecture, interior design, materials, lighting, and practical design knowledge.",
+    "url": "https://www.glimmerhomedetails.com/about.html",
+    "author": {
+      "@type": "Person",
+      "name": "Elena Marchetti"
+    }
+  }
+  </script>
+  <style>
+    /* --- RESET & VARIABLES --- */
+    * {
+      margin: 0;
+      padding: 0;
+      box-sizing: border-box;
+    }
+
+    :root {
+      --ink: #1e1e1e;
+      --paper: #faf9f7;
+      --paper-alt: #f3f1ee;
+      --border: #e2dfda;
+      --accent: #9b6b4b;
+      --accent-light: #c49a7a;
+      --muted: #6e6a64;
+      --white: #ffffff;
+      --font-serif: 'Georgia', 'Times New Roman', serif;
+      --font-sans: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Helvetica, Arial, sans-serif;
+      --max-width: 1280px;
+      --radius-sm: 2px;
+      --radius-md: 4px;
+      --transition: 0.2s ease;
+    }
+
+    html {
+      scroll-behavior: smooth;
+    }
+
+    body {
+      font-family: var(--font-sans);
+      background-color: var(--paper);
+      color: var(--ink);
+      line-height: 1.6;
+      font-size: 16px;
+      -webkit-font-smoothing: antialiased;
+    }
+
+    img {
+      max-width: 100%;
+      height: auto;
+      display: block;
+    }
+
+    a {
+      color: inherit;
+      text-decoration: none;
+    }
+
+    ul, ol {
+      list-style: none;
+    }
+
+    /* --- TYPOGRAPHY --- */
+    h1, h2, h3, h4 {
+      font-family: var(--font-serif);
+      font-weight: 400;
+      line-height: 1.25;
+      letter-spacing: -0.01em;
+    }
+
+    h1 { font-size: 2.6rem; }
+    h2 { font-size: 1.9rem; margin-top: 2.5rem; margin-bottom: 1rem; }
+    h3 { font-size: 1.4rem; margin-top: 2rem; margin-bottom: 0.75rem; }
+    h4 { font-size: 1.15rem; margin-top: 1.5rem; margin-bottom: 0.5rem; }
+
+    p {
+      margin-bottom: 1.25rem;
+      color: #2a2a2a;
+    }
+
+    .meta {
+      font-size: 0.8rem;
+      text-transform: uppercase;
+      letter-spacing: 0.06em;
+      color: var(--muted);
+      font-weight: 500;
+    }
+
+    .reading-time {
+      font-size: 0.78rem;
+      color: var(--muted);
+      text-transform: uppercase;
+      letter-spacing: 0.04em;
+    }
+
+    /* --- LAYOUT --- */
+    .container {
+      max-width: var(--max-width);
+      margin: 0 auto;
+      padding: 0 1.5rem;
+    }
+
+    .layout-grid {
+      display: grid;
+      grid-template-columns: 1fr 320px;
+      gap: 3rem;
+      align-items: start;
+    }
+
+    @media (max-width: 960px) {
+      .layout-grid {
+        grid-template-columns: 1fr;
+        gap: 2rem;
+      }
+    }
+
+    /* --- HEADER --- */
+    .site-header {
+      background: var(--white);
+      border-bottom: 1px solid var(--border);
+      position: sticky;
+      top: 0;
+      z-index: 100;
+      padding: 1rem 0;
+    }
+
+    .header-inner {
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+    }
+
+    .logo {
+      display: flex;
+      align-items: center;
+      gap: 0.6rem;
+      font-family: var(--font-serif);
+      font-size: 1.6rem;
+      letter-spacing: -0.02em;
+    }
+
+    .logo-mark {
+      width: 36px;
+      height: 36px;
+      background: var(--ink);
+      color: var(--paper);
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      font-size: 1.2rem;
+      border-radius: 2px;
+      font-weight: 400;
+      font-family: var(--font-serif);
+    }
+
+    .logo-text {
+      font-weight: 400;
+      line-height: 1;
+    }
+
+    .logo-text span {
+      display: block;
+      font-size: 0.6rem;
+      font-family: var(--font-sans);
+      text-transform: uppercase;
+      letter-spacing: 0.18em;
+      color: var(--muted);
+      margin-top: 2px;
+    }
+
+    .nav-links {
+      display: flex;
+      gap: 1.8rem;
+      font-size: 0.9rem;
+      font-weight: 500;
+      color: #3a3a3a;
+      align-items: center;
+    }
+
+    .nav-links a {
+      position: relative;
+      padding-bottom: 2px;
+    }
+
+    .nav-links a:hover {
+      color: var(--accent);
+    }
+
+    .nav-links a::after {
+      content: '';
+      position: absolute;
+      bottom: -2px;
+      left: 0;
+      width: 0;
+      height: 1px;
+      background: var(--accent);
+      transition: var(--transition);
+    }
+
+    .nav-links a:hover::after {
+      width: 100%;
+    }
+
+    .mobile-toggle {
+      display: none;
+      background: none;
+      border: 1px solid var(--border);
+      padding: 0.4rem 0.8rem;
+      font-size: 1.2rem;
+      cursor: pointer;
+      border-radius: var(--radius-sm);
+    }
+
+    @media (max-width: 768px) {
+      .nav-links {
+        display: none;
+        flex-direction: column;
+        position: absolute;
+        top: 70px;
+        left: 0;
+        right: 0;
+        background: var(--white);
+        border-bottom: 1px solid var(--border);
+        padding: 1.5rem;
+        gap: 1rem;
+        align-items: flex-start;
+        box-shadow: 0 8px 16px rgba(0,0,0,0.04);
+      }
+      .nav-links.open {
+        display: flex;
+      }
+      .mobile-toggle {
+        display: block;
+      }
+      .header-inner {
+        position: relative;
+      }
+    }
+
+    /* --- ABOUT HERO --- */
+    .about-hero {
+      padding: 3.5rem 0 2rem;
+      border-bottom: 1px solid var(--border);
+      margin-bottom: 2.5rem;
+      text-align: center;
+    }
+
+    .about-hero h1 {
+      font-size: 3rem;
+      max-width: 800px;
+      margin: 0 auto 1rem;
+      line-height: 1.15;
+    }
+
+    .about-hero .subhead {
+      font-size: 1.15rem;
+      color: var(--muted);
+      max-width: 620px;
+      margin: 0 auto;
+      font-family: var(--font-serif);
+      font-style: italic;
+    }
+
+    @media (max-width: 600px) {
+      .about-hero h1 {
+        font-size: 2.1rem;
+      }
+    }
+
+    /* --- ABOUT CONTENT --- */
+    .about-intro-grid {
+      display: grid;
+      grid-template-columns: 1.2fr 0.8fr;
+      gap: 3rem;
+      align-items: start;
+      margin-bottom: 3rem;
+    }
+
+    .about-intro-text p {
+      font-size: 1.05rem;
+    }
+
+    .about-intro-text p:first-of-type::first-letter {
+      font-family: var(--font-serif);
+      font-size: 3.2rem;
+      float: left;
+      line-height: 0.8;
+      padding-right: 0.5rem;
+      padding-top: 0.4rem;
+      color: var(--accent);
+    }
+
+    .about-image {
+      border-radius: var(--radius-md);
+      overflow: hidden;
+      border: 1px solid var(--border);
+    }
+
+    .about-image img {
+      width: 100%;
+      height: 100%;
+      object-fit: cover;
+      min-height: 300px;
+    }
+
+    .about-image figcaption {
+      padding: 0.8rem 1rem;
+      font-size: 0.78rem;
+      color: var(--muted);
+      background: var(--white);
+      border-top: 1px solid var(--border);
+      text-transform: uppercase;
+      letter-spacing: 0.04em;
+    }
+
+    @media (max-width: 768px) {
+      .about-intro-grid {
+        grid-template-columns: 1fr;
+        gap: 1.5rem;
+      }
+    }
+
+    /* --- VALUES SECTION --- */
+    .values-grid {
+      display: grid;
+      grid-template-columns: repeat(3, 1fr);
+      gap: 2rem;
+      margin: 2.5rem 0 3rem;
+    }
+
+    .value-card {
+      background: var(--white);
+      border: 1px solid var(--border);
+      border-radius: var(--radius-md);
+      padding: 2rem 1.8rem;
+    }
+
+    .value-card .value-icon {
+      font-size: 2rem;
+      margin-bottom: 0.8rem;
+      display: block;
+    }
+
+    .value-card h3 {
+      margin-top: 0;
+      font-size: 1.3rem;
+      margin-bottom: 0.6rem;
+    }
+
+    .value-card p {
+      font-size: 0.92rem;
+      color: #4a4a4a;
+      margin-bottom: 0;
+    }
+
+    @media (max-width: 768px) {
+      .values-grid {
+        grid-template-columns: 1fr;
+        gap: 1.2rem;
+      }
+    }
+
+    /* --- TEAM --- */
+    .team-grid {
+      display: grid;
+      grid-template-columns: repeat(3, 1fr);
+      gap: 2rem;
+      margin: 1.5rem 0 3rem;
+    }
+
+    .team-member {
+      background: var(--white);
+      border: 1px solid var(--border);
+      border-radius: var(--radius-md);
+      padding: 1.8rem 1.5rem;
+      text-align: center;
+    }
+
+    .team-avatar {
+      width: 90px;
+      height: 90px;
+      border-radius: 50%;
+      background: var(--paper-alt);
+      margin: 0 auto 1rem;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      font-size: 2.2rem;
+      color: var(--muted);
+      border: 1px solid var(--border);
+    }
+
+    .team-member h4 {
+      margin-top: 0;
+      font-family: var(--font-serif);
+      font-size: 1.2rem;
+    }
+
+    .team-member .role {
+      font-size: 0.78rem;
+      text-transform: uppercase;
+      letter-spacing: 0.06em;
+      color: var(--accent);
+      font-weight: 600;
+      margin-bottom: 0.6rem;
+    }
+
+    .team-member p {
+      font-size: 0.88rem;
+      color: var(--muted);
+      margin-bottom: 0;
+    }
+
+    @media (max-width: 768px) {
+      .team-grid {
+        grid-template-columns: 1fr;
+      }
+    }
+
+    /* --- EDITORIAL POLICY --- */
+    .policy-box {
+      background: var(--white);
+      border: 1px solid var(--border);
+      border-radius: var(--radius-md);
+      padding: 2.5rem;
+      margin: 2rem 0 3rem;
+    }
+
+    .policy-box h2 {
+      margin-top: 0;
+    }
+
+    .policy-box ul {
+      list-style: none;
+      margin: 1.2rem 0 0;
+    }
+
+    .policy-box ul li {
+      position: relative;
+      padding-left: 1.5rem;
+      margin-bottom: 0.8rem;
+      font-size: 0.95rem;
+      color: #3a3a3a;
+    }
+
+    .policy-box ul li::before {
+      content: '—';
+      position: absolute;
+      left: 0;
+      color: var(--accent);
+      font-weight: 600;
+    }
+
+    /* --- SIDEBAR (reuse) --- */
+    .sidebar {
+      position: sticky;
+      top: 100px;
+    }
+
+    .sidebar-widget {
+      background: var(--white);
+      border: 1px solid var(--border);
+      border-radius: var(--radius-md);
+      padding: 1.5rem;
+      margin-bottom: 1.8rem;
+    }
+
+    .sidebar-widget h4 {
+      font-family: var(--font-serif);
+      font-size: 1.1rem;
+      margin-top: 0;
+      margin-bottom: 1rem;
+      border-bottom: 1px solid var(--border);
+      padding-bottom: 0.6rem;
+    }
+
+    .sidebar-widget ul li {
+      margin-bottom: 0.8rem;
+      font-size: 0.9rem;
+      line-height: 1.4;
+    }
+
+    .sidebar-widget ul li a:hover {
+      color: var(--accent);
+    }
+
+    .about-editor {
+      text-align: center;
+    }
+
+    .editor-avatar {
+      width: 70px;
+      height: 70px;
+      border-radius: 50%;
+      background: var(--paper-alt);
+      margin: 0 auto 0.8rem;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      font-size: 1.8rem;
+      color: var(--muted);
+      border: 1px solid var(--border);
+    }
+
+    .editor-bio {
+      font-size: 0.85rem;
+      color: var(--muted);
+      line-height: 1.5;
+    }
+
+    /* --- NEWSLETTER (reuse) --- */
+    .newsletter {
+      background: var(--paper-alt);
+      border: 1px solid var(--border);
+      border-radius: var(--radius-md);
+      padding: 2.5rem;
+      margin: 2rem 0 3rem;
+      text-align: center;
+    }
+
+    .newsletter h3 {
+      margin-top: 0;
+      font-size: 1.6rem;
+    }
+
+    .newsletter p {
+      color: var(--muted);
+      max-width: 480px;
+      margin: 0.5rem auto 1.5rem;
+      font-size: 0.95rem;
+    }
+
+    .newsletter-form {
+      display: flex;
+      max-width: 460px;
+      margin: 0 auto;
+      gap: 0.5rem;
+    }
+
+    .newsletter-form input {
+      flex: 1;
+      padding: 0.75rem 1rem;
+      border: 1px solid var(--border);
+      border-radius: var(--radius-sm);
+      font-size: 0.9rem;
+      font-family: var(--font-sans);
+      outline: none;
+      background: var(--white);
+    }
+
+    .newsletter-form input:focus {
+      border-color: var(--accent);
+    }
+
+    .newsletter-form button {
+      background: var(--ink);
+      color: var(--paper);
+      border: none;
+      padding: 0 1.5rem;
+      font-size: 0.85rem;
+      text-transform: uppercase;
+      letter-spacing: 0.06em;
+      cursor: pointer;
+      border-radius: var(--radius-sm);
+      font-weight: 500;
+      transition: background var(--transition);
+    }
+
+    .newsletter-form button:hover {
+      background: var(--accent);
+    }
+
+    @media (max-width: 480px) {
+      .newsletter-form {
+        flex-direction: column;
+      }
+      .newsletter-form button {
+        padding: 0.75rem;
+      }
+    }
+
+    /* --- FOOTER --- */
+    .site-footer {
+      background: var(--ink);
+      color: #b0aaa4;
+      padding: 3rem 0 1.5rem;
+      font-size: 0.85rem;
+    }
+
+    .footer-grid {
+      display: grid;
+      grid-template-columns: 2fr 1fr 1fr 1fr;
+      gap: 2rem;
+      margin-bottom: 2rem;
+    }
+
+    .footer-brand .logo-text {
+      color: var(--paper);
+    }
+
+    .footer-brand p {
+      color: #8a847e;
+      margin-top: 1rem;
+      max-width: 300px;
+      font-size: 0.85rem;
+    }
+
+    .footer-col h5 {
+      color: var(--paper);
+      font-family: var(--font-sans);
+      font-size: 0.8rem;
+      text-transform: uppercase;
+      letter-spacing: 0.08em;
+      margin-bottom: 1rem;
+      font-weight: 600;
+    }
+
+    .footer-col a {
+      display: block;
+      margin-bottom: 0.5rem;
+      color: #8a847e;
+      transition: color var(--transition);
+    }
+
+    .footer-col a:hover {
+      color: var(--paper);
+    }
+
+    .footer-bottom {
+      border-top: 1px solid #333;
+      padding-top: 1.5rem;
+      display: flex;
+      justify-content: space-between;
+      flex-wrap: wrap;
+      gap: 1rem;
+      color: #6a645e;
+      font-size: 0.8rem;
+    }
+
+    @media (max-width: 768px) {
+      .footer-grid {
+        grid-template-columns: 1fr 1fr;
+      }
+    }
+
+    @media (max-width: 480px) {
+      .footer-grid {
+        grid-template-columns: 1fr;
+      }
+    }
+
+    /* --- UTILITY --- */
+    .section-title {
+      font-size: 1.6rem;
+      margin-bottom: 0.25rem;
+      padding-bottom: 0.5rem;
+      border-bottom: 1px solid var(--border);
+    }
+    .section-sub {
+      color: var(--muted);
+      font-size: 0.9rem;
+      margin-bottom: 1.5rem;
+    }
+    .text-center { text-align: center; }
+  </style>
+</head>
+<body>
+
+<!-- ================= HEADER ================= -->
+<header class="site-header">
+  <div class="container header-inner">
+    <div class="logo">
+      <div class="logo-mark">G</div>
+      <div class="logo-text">
+        Glimmer Home
+        <span>Details</span>
+      </div>
+    </div>
+    <button class="mobile-toggle" id="mobileToggle" aria-label="Menu">☰</button>
+    <nav class="nav-links" id="navLinks">
+      <li><a href="index.html">Home</a></li>
+      <li><a href="about.html">About</a></li>
+      <li><a href="contact.html">Contact</a></li>
+      <li><a href="terms.html">Terms Of Privacy</a></li>
+      <li><a href="privacy.html">Privacy Policy</a></li>
+      <li><a href="cookies.html">Cookies Policy</a></li>
+      <li><a href="disclaimer.html">Disclaimer</a></li>
+      <li><a href="categories.html">Categories</a></li>
+    </nav>
+  </div>
+</header>
+
+<!-- ================= MAIN CONTENT ================= -->
+<div class="container">
+
+  <!-- ABOUT HERO -->
+  <section class="about-hero">
+    <h1>We believe thoughtful spaces change how we live.</h1>
+    <p class="subhead">Glimmer Home Details is an independent journal exploring residential architecture, interior design, materials, and the quiet details that make a house feel like home.</p>
+  </section>
+
+  <!-- ABOUT INTRO + IMAGE -->
+  <div class="about-intro-grid">
+    <div class="about-intro-text">
+      <p>Founded in 2021 by architectural writer and former interior designer Elena Marchetti, Glimmer Home Details began as a personal notebook — a place to document the ideas, materials, and spatial principles that shape meaningful residential design. Today it is a fully independent publication read by homeowners, designers, architects, and anyone who cares about the built environment.</p>
+      <p>We are not a trend site. We do not chase virality or publish sponsored listicles. Instead, we take the long view: studying how light moves through a room, how a material ages, how a floor plan supports daily rituals. Our articles are researched, tested against real projects, and written to be useful for years — not just for a news cycle.</p>
+      <p>Every week we publish in-depth guides, case studies, and essays. We interview architects and makers. We visit homes and construction sites. And we distill what we learn into clear, practical knowledge you can apply to your own space — whether you're renovating a single room or designing a house from the ground up.</p>
+      <p><strong>Our promise is simple:</strong> no fluff, no hidden agendas, no pay-to-play coverage. Just independent design journalism, made with care.</p>
+    </div>
+    <figure class="about-image">
+      <img src="https://images.unsplash.com/photo-1600585154340-be6161a56a0c?w=600&h=500&fit=crop" alt="Sunlit living space with natural materials and large windows, representing the design philosophy of Glimmer Home Details">
+      <figcaption>Light, material, and restraint — the three pillars we return to in every article.</figcaption>
+    </figure>
+  </div>
+
+  <!-- VALUES -->
+  <h2 class="section-title">What Guides Us</h2>
+  <p class="section-sub">Three principles behind every piece we publish.</p>
+  <div class="values-grid">
+    <div class="value-card">
+      <span class="value-icon">◻</span>
+      <h3>Clarity over clutter</h3>
+      <p>We write to inform, not to impress. Our articles are structured, jargon-light, and grounded in practical application. If a concept can't be explained simply, we work harder until it can.</p>
+    </div>
+    <div class="value-card">
+      <span class="value-icon">◈</span>
+      <h3>Honesty in materials</h3>
+      <p>We celebrate surfaces that age gracefully — concrete, timber, stone, linen. We believe good design respects the nature of materials rather than masking them with synthetic imitations.</p>
+    </div>
+    <div class="value-card">
+      <span class="value-icon">◉</span>
+      <h3>Independence, always</h3>
+      <p>We accept no sponsored content, no affiliate commissions, and no brand payments. Our recommendations come from research and experience, not from advertising deals.</p>
+    </div>
+  </div>
+
+  <!-- TEAM -->
+  <h2 class="section-title">The Team</h2>
+  <p class="section-sub">A small, independent editorial group based in Milan and London.</p>
+  <div class="team-grid">
+    <div class="team-member">
+      <div class="team-avatar">✎</div>
+      <h4>Elena Marchetti</h4>
+      <div class="role">Founder & Editor-in-Chief</div>
+      <p>Former interior designer with 12 years of practice in Milan and New York. Elena writes about spatial balance, materiality, and the psychology of home.</p>
+    </div>
+    <div class="team-member">
+      <div class="team-avatar">✎</div>
+      <h4>James K. Whitfield</h4>
+      <div class="role">Senior Editor, Architecture</div>
+      <p>Architect and writer based in London. James covers residential architecture, facade design, and sustainable building strategies.</p>
+    </div>
+    <div class="team-member">
+      <div class="team-avatar">✎</div>
+      <h4>Sofia Lindgren</h4>
+      <div class="role">Editor, Interiors & Lighting</div>
+      <p>Stockholm-born lighting designer and interiors writer. Sofia explores how light, color, and furniture shape atmosphere in everyday rooms.</p>
+    </div>
+  </div>
+
+  <!-- EDITORIAL POLICY -->
+  <div class="policy-box">
+    <h2>Editorial Policy</h2>
+    <p>Glimmer Home Details is committed to independent, high-quality design journalism. Our editorial decisions are made solely by our editors — never by advertisers, brands, or external partners.</p>
+    <ul>
+      <li>We do not publish sponsored articles, native advertising, or paid placements.</li>
+      <li>We do not use affiliate links. If we mention a product or material, it is because it is relevant to the story — not because we earn a commission.</li>
+      <li>We fact-check all technical claims and credit sources where appropriate.</li>
+      <li>We correct errors promptly and transparently.</li>
+      <li>Our team has no financial relationships with the brands or firms we cover, unless explicitly disclosed in the article.</li>
+    </ul>
+    <p style="margin-top:1.5rem; font-size:0.9rem; color:var(--muted);">If you have questions about our editorial standards, please <a href="contact.html" style="color:var(--accent);">contact us</a>.</p>
+  </div>
+
+  <!-- NEWSLETTER -->
+  <section class="newsletter">
+    <h3>Stay Inspired</h3>
+    <p>Join our weekly newsletter for thoughtful essays, design guides, and curated inspiration. No spam — just good reading.</p>
+    <form class="newsletter-form" id="newsletterForm">
+      <input type="email" placeholder="Your email address" aria-label="Email address" required>
+      <button type="submit">Subscribe</button>
+    </form>
+    <p style="font-size:0.75rem; margin-top:1rem; color:var(--muted);" id="newsletterMsg"></p>
+  </section>
+
+  <!-- SIDEBAR (as part of layout on desktop, but here we place it after main content on mobile) -->
+  <!-- Since this is a standalone about page, we keep the sidebar content in a two-column layout only on larger screens. 
+       However, to keep things simple and focused, we'll place the sidebar content below on all screens as a secondary section. 
+       But for consistency with the design, we'll wrap it in a layout-grid-like structure only for desktop. 
+       Actually, we'll integrate the sidebar into the layout grid properly. -->
+
+</div>
+
+<!-- We'll restructure the layout to include sidebar properly within a grid -->
+<!-- Re-open container and use layout-grid for main content + sidebar -->
+<div class="container" style="margin-top: 2rem;">
+  <div class="layout-grid">
+    <main>
+      <!-- The main about content is already above. We'll move the above content inside this main? 
+           To avoid duplication, we'll keep the above content as is, but the sidebar needs to be placed alongside.
+           Let's restructure: everything above the newsletter is main content. We'll wrap it in a main tag.
+           But since the HTML is already written, we'll use CSS to position sidebar correctly. 
+           Actually, simpler: the about page content above is full-width; we'll place sidebar as a separate section below.
+           But that breaks the layout-grid. We'll instead remove the earlier container and integrate.
+           However, the code is already structured. For simplicity and to avoid confusion, we'll keep the about content full-width 
+           and add a sidebar-like section at the bottom with related links, editor bio, etc.
+           But the user asked for an "about page" — it's fine to have full-width content.
+           We'll add a small "Editor's Note" sidebar-style box at the end for consistency. -->
+    </main>
+  </div>
+</div>
+
+<!-- SIDEBAR-STYLE SECTION (full width, but styled like sidebar widgets) -->
+<div class="container" style="margin-top: 1rem;">
+  <div style="display: grid; grid-template-columns: repeat(auto-fit, minmax(280px, 1fr)); gap: 2rem;">
+    <div class="sidebar-widget" style="margin-bottom:0;">
+      <h4>About the Editor</h4>
+      <div class="about-editor" style="text-align:left;">
+        <div style="display:flex; gap:1rem; align-items:center; margin-bottom:0.8rem;">
+          <div class="editor-avatar" style="width:50px; height:50px; font-size:1.2rem; margin:0;">✎</div>
+          <div><strong>Elena Marchetti</strong><br><span style="font-size:0.75rem; color:var(--muted);">Founder & Editor</span></div>
+        </div>
+        <p class="editor-bio" style="text-align:left;">Elena is an architectural writer and former interior designer based in Milan. She founded Glimmer Home Details to explore the intersection of craft, space, and daily life.</p>
+      </div>
+    </div>
+    <div class="sidebar-widget" style="margin-bottom:0;">
+      <h4>Popular This Month</h4>
+      <ul>
+        <li class="popular-item" style="display:flex; gap:0.8rem; align-items:flex-start; margin-bottom:0.8rem;">
+          <span class="popular-num" style="font-family:var(--font-serif); font-size:1.4rem; color:var(--accent-light); line-height:1; min-width:24px;">1</span>
+          <span class="popular-text" style="font-size:0.9rem; font-weight:500;">The Quiet Power of Negative Space</span>
+        </li>
+        <li class="popular-item" style="display:flex; gap:0.8rem; align-items:flex-start; margin-bottom:0.8rem;">
+          <span class="popular-num" style="font-family:var(--font-serif); font-size:1.4rem; color:var(--accent-light); line-height:1; min-width:24px;">2</span>
+          <span class="popular-text" style="font-size:0.9rem; font-weight:500;">Material Honesty: Tactile Surfaces</span>
+        </li>
+        <li class="popular-item" style="display:flex; gap:0.8rem; align-items:flex-start; margin-bottom:0.8rem;">
+          <span class="popular-num" style="font-family:var(--font-serif); font-size:1.4rem; color:var(--accent-light); line-height:1; min-width:24px;">3</span>
+          <span class="popular-text" style="font-size:0.9rem; font-weight:500;">Lighting Layers for Every Room</span>
+        </li>
+        <li class="popular-item" style="display:flex; gap:0.8rem; align-items:flex-start; margin-bottom:0.8rem;">
+          <span class="popular-num" style="font-family:var(--font-serif); font-size:1.4rem; color:var(--accent-light); line-height:1; min-width:24px;">4</span>
+          <span class="popular-text" style="font-size:0.9rem; font-weight:500;">Small Space, Big Ideas</span>
+        </li>
+        <li class="popular-item" style="display:flex; gap:0.8rem; align-items:flex-start; margin-bottom:0.8rem;">
+          <span class="popular-num" style="font-family:var(--font-serif); font-size:1.4rem; color:var(--accent-light); line-height:1; min-width:24px;">5</span>
+          <span class="popular-text" style="font-size:0.9rem; font-weight:500;">Facade Design: First Impressions</span>
+        </li>
+      </ul>
+    </div>
+    <div class="sidebar-widget" style="margin-bottom:0;">
+      <h4>Categories</h4>
+      <ul>
+        <li><a href="categories.html">Interior Design</a></li>
+        <li><a href="categories.html">Architecture</a></li>
+        <li><a href="categories.html">Home Design</a></li>
+        <li><a href="categories.html">Materials</a></li>
+        <li><a href="categories.html">Space Planning</a></li>
+        <li><a href="categories.html">Lighting</a></li>
+        <li><a href="categories.html">Furniture</a></li>
+        <li><a href="categories.html">Modern Homes</a></li>
+      </ul>
+    </div>
+  </div>
+</div>
+
+<!-- ================= FOOTER ================= -->
+<footer class="site-footer">
+  <div class="container">
+    <div class="footer-grid">
+      <div class="footer-brand">
+        <div class="logo-text" style="font-family:var(--font-serif); font-size:1.4rem;">Glimmer Home Details</div>
+        <p>An independent publication exploring residential architecture, interior design, and the art of living well. Founded 2021.</p>
+      </div>
+      <div class="footer-col">
+        <h5>About</h5>
+        <a href="about.html">Our Mission</a>
+        <a href="about.html">Editorial Team</a>
+        <a href="contact.html">Contact</a>
+        <a href="privacy.html">Privacy Policy</a>
+      </div>
+      <div class="footer-col">
+        <h5>Topics</h5>
+        <a href="categories.html">Interior Design</a>
+        <a href="categories.html">Architecture</a>
+        <a href="categories.html">Materials</a>
+        <a href="categories.html">Lighting</a>
+      </div>
+      <div class="footer-col">
+        <h5>Legal</h5>
+        <a href="terms.html">Terms of Use</a>
+        <a href="cookies.html">Cookie Policy</a>
+        <a href="disclaimer.html">Disclaimer</a>
+        <a href="#">Sitemap</a>
+      </div>
+    </div>
+    <div class="footer-bottom">
+      <span>© 2025 Glimmer Home Details. All rights reserved.</span>
+      <span>Made with care for thoughtful homes.</span>
+    </div>
+  </div>
+</footer>
+
+<!-- ================= JAVASCRIPT ================= -->
+<script>
+  (function() {
+    // ----- MOBILE MENU TOGGLE -----
+    const mobileToggle = document.getElementById('mobileToggle');
+    const navLinks = document.getElementById('navLinks');
+    if (mobileToggle && navLinks) {
+      mobileToggle.addEventListener('click', () => {
+        navLinks.classList.toggle('open');
+      });
+      navLinks.querySelectorAll('a').forEach(link => {
+        link.addEventListener('click', () => {
+          navLinks.classList.remove('open');
+        });
+      });
+    }
+
+    // ----- NEWSLETTER FORM -----
+    const newsletterForm = document.getElementById('newsletterForm');
+    const newsletterMsg = document.getElementById('newsletterMsg');
+    if (newsletterForm) {
+      newsletterForm.addEventListener('submit', (e) => {
+        e.preventDefault();
+        const email = newsletterForm.querySelector('input').value;
+        if (email) {
+          newsletterMsg.textContent = 'Thank you! You are now subscribed to Glimmer Home Details.';
+          newsletterForm.reset();
+          setTimeout(() => { newsletterMsg.textContent = ''; }, 5000);
+        }
+      });
+    }
+
+    // Simple FAQ-like interaction not needed here, but we keep the script clean.
+    console.log('About page loaded.');
+  })();
+</script>
+</body>
+</html>
